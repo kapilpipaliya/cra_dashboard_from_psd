@@ -5,6 +5,7 @@ import Brand from "../../images/Brand.png";
 import clsx from "clsx";
 import { useOutSideClick } from "../../hooks/useOutSideClick";
 import { Navigation, NavigationOptionsType } from "../Navigation";
+import { User, UserInformation } from "../UserInformation";
 
 const navigationOptions: NavigationOptionsType = [
   { id: 1, iconClassName: "fas fa-user", title: "My Profile" },
@@ -78,7 +79,7 @@ interface FollowersProps {
   isOpen: boolean;
   setIsOpen: (v: boolean) => void;
 }
-const users = [
+const users: User[] = [
   {
     id: 1,
     status: "idle",
@@ -170,6 +171,7 @@ const users = [
     role: "Art Director, Movie cutter",
   },
 ];
+
 export const Followers = (props: FollowersProps) => {
   const menuDivRef = useRef<HTMLDivElement>(null);
   const { isOpen, setIsOpen } = props;
@@ -187,28 +189,7 @@ export const Followers = (props: FollowersProps) => {
       </div>
       {users.map((u) => (
         <div key={u.id}>
-          <div className="flex-horizontal user-item">
-            <div className="user-avatar">
-              <img
-                src="https://via.placeholder.com/150"
-                className="user-image"
-                alt={u.name}
-              />
-              <div
-                className={clsx(
-                  "user-status-circle",
-                  u.status === "idle" && "bg-idle",
-                  u.status === "active" && "bg-active"
-                )}
-              />
-            </div>
-            <div className={"flex-vertical user-information"}>
-              <div className="flex-vertical">
-                <div className="user-name">{u.name}</div>
-                <div className="user-role">{u.role}</div>
-              </div>
-            </div>
-          </div>
+          <UserInformation user={u} />
         </div>
       ))}
     </div>
