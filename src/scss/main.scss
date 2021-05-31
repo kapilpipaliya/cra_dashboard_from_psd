@@ -17,7 +17,10 @@ body {
   display: flex;
   flex-direction: row;
 }
-
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
+}
 .flex-align-items-center {
   align-items: center;
 }
@@ -28,6 +31,9 @@ body {
 .flex-justify-content-end {
   justify-content: flex-end;
 }
+.flex-justify-content-center {
+  justify-content: center;
+}
 .bg-blue {
   background-color: #303f9f;
 }
@@ -35,7 +41,15 @@ body {
 .color-white {
   color: #ffffff;
 }
-
+.color-black {
+  color: #000000;
+}
 .bg-light-blue {
   background-color: #3f51b5;
+}
+.display-none {
+  display: none;
+}
+.cursor-pointer {
+  cursor: pointer;
 }
