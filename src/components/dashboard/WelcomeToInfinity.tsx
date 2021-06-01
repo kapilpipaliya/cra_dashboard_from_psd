@@ -10,9 +10,9 @@ interface CardProps {
 const Card = (props: CardProps) => {
   const { title, subtitle, count } = props;
   return (
-    <div className="flex-horizontal flex-align-items-center card">
+    <div className="flex-horizontal flex-align-items-center widget card">
       <div className="flex-vertical">
-        <div className="title">{title}</div>
+        <div className="widget-title">{title}</div>
         <div className="subtitle">{subtitle}</div>
       </div>
       <div className="count">{count}</div>

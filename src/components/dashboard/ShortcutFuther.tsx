@@ -10,10 +10,10 @@ interface CardProps {
 const Card = (props: CardProps) => {
   const { title, subtitle, iconClassName, variant } = props;
   return (
-    <div className="flex-vertical card">
-      <div className="flex-horizontal flex-align-items-center">
+    <div className="flex-vertical widget card">
+      <div className="flex-horizontal flex-align-items-center top-part">
         <div className="flex-vertical">
-          <div className={clsx("title", variant)}>{title}</div>
+          <div className={clsx("widget-title", variant)}>{title}</div>
           <div className="subtitle">{subtitle}</div>
         </div>
         <div className="count">

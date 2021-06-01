@@ -81,28 +81,19 @@
 .welcome-container {
   font-family: 'Raleway', sans-serif;
   gap: 30px;
-  margin-bottom: 30px;
 
   .card {
-    height: 150px;
     width: 50%;
-    box-shadow: 0 0 1px 1px rgb(215,224,241);
-    background-color: white;
-  }
-  .title {
-    font-size: 3rem;
-    padding-left: 50px;
-    margin-bottom: 20px;
+    padding: 1rem;
   }
   .subtitle {
-    font-size: 1.5rem;
-    padding-left: 50px;
+    font-size: 95%;
+    color: #6a6c6f;
   }
   .count {
     margin-left: auto;
-    font-weight: 800;
-    font-size: 2rem;
-    margin-right: 60px;
+    font-weight: 500;
+    font-size: 24px;
   }
 }
 
@@ -111,38 +102,18 @@
   gap: 30px;
 
   .card {
-    height: 200px;
     flex-basis: 360px;
-    box-shadow: 0 0 1px 1px rgb(215,224,241);
-    background-color: white;
   }
-  .title {
-    font-size: 1.5rem;
-    padding-left: 40px;
-    margin: 20px 0;
-    font-weight: 600;
-    &.normal {
-       color: #3f51b5;
-    }
-    &.warning {
-      color: rgb(230,160,0);
-    }
-    &.success {
-      color: rgb(76,175,80);
-    }
-    &.danger {
-      color: rgb(230,74,25);
-    }
+  .top-part {
+    padding: 1rem;
   }
   .subtitle {
     font-size: 0.8rem;
-    padding-left: 40px;
   }
   .count {
     margin-left: auto;
-    font-weight: 800;
-    font-size: 2rem;
-    margin-right: 30px;
+    font-weight: 500;
+    font-size: 24px;
   }
   .footer {
     margin-top: auto;
@@ -166,4 +137,25 @@
 
   }
 
+}
+
+.sales-in-2014 {
+  justify-content: space-between;
+  gap: 10px;
+  padding: 24px;
+
+  .first-column,.second-column {
+    flex-grow: 1;
+
+    h3, p {
+      margin-bottom: 24px;
+    }
+    p {
+      line-height: 1.8;
+    }
+    h3 {
+      font-size: 24px;
+      color: #188ae2;
+    }
+  }
 }

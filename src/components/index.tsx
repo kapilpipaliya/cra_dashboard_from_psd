@@ -3,6 +3,7 @@ import { Menu } from "./dashboard/Menu";
 import { Navbar } from "./dashboard/Navbar";
 import { WelcomeToInfinity } from "./dashboard/WelcomeToInfinity";
 import { ShortcutFuther } from "./dashboard/ShortcutFuther";
+import { SalesIn2014 } from "./dashboard/SalesIn2014";
 interface DashboardProps {}
 
 export const Dashboard = (props: DashboardProps) => {
@@ -14,6 +15,7 @@ export const Dashboard = (props: DashboardProps) => {
         <div className="flex-grow-1 dashboard-content">
           <WelcomeToInfinity />
           <ShortcutFuther />
+          <SalesIn2014 />
         </div>
       </div>
     </>
