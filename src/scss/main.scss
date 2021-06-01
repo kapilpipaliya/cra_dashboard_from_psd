@@ -54,10 +54,12 @@ body {
   cursor: pointer;
 }
 
-.navigation-menu {
+.modal{
   position: absolute;
   top: 65px;
   right: 0;
+}
+.navigation-menu {
   width: 400px;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
   gap: 2px;
@@ -67,30 +69,87 @@ body {
   cursor: auto;
 
   .list-item {
-    height: 70px;
-    align-items: center;
     padding-left: 50px;
     gap: 10px;
     cursor: pointer;
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.2);
+    &.menu {
+      height: 70px;
+      &:hover {
+        background-color: rgb(245, 247, 249);
+      }
+    }
+    &.header {
+      height: 50px;
+      font-size: 0.8rem;
     }
   }
   .list-title {
     font-weight: 600;
-    font-size: 20px;
   }
   .list-count {
-    background: #3f51b5;
+
     color: #fff;
-    padding: 2px 15px;
-    border-radius: 10px;
-    font-size: 20px;
+    padding: 1px 5px;
+    border-radius: 5px;
+    font-size: 16px;
     margin-left: auto;
     margin-right: 25px;
+    &.normal {
+      background: #3f51b5;
+    }
+    &.warning {
+      background: rgb(230,160,0);
+    }
+    &.success {
+      background: rgb(76,175,80);
+    }
+    &.danger {
+      background: rgb(230,74,25);
+    }
+
   }
   .divider {
     border: 1px solid rgba(0, 0, 0, 0.1);
     width: 100%;
   }
+}
+
+
+// user information:
+.user-avatar {
+  position: relative;
+}
+.user-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.user-status-circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+}
+.bg-active {
+  background-color: #7dba2f;
+}
+.bg-idle {
+  background-color: #303f9f;
+}
+.user-information {
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 0 35px;
+}
+.user-name {
+  font-weight: 600;
+  font-size: 25px;
+  padding: 7px 0;
+}
+.user-role {
+  font-weight: 600;
+  font-size: 16px;
+  color: grey;
 }

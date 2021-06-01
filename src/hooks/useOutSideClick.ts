@@ -3,15 +3,15 @@ import { useEffect } from "react";
 
 export const useOutSideClick = (
   ref: React.MutableRefObject<HTMLElement | null>,
-  isOpen: boolean,
-  setIsOpen: (v: boolean) => void
+  isOpen?: boolean,
+  setIsOpen?: (v: boolean) => void
 ) => {
   useEffect(() => {
     if (isOpen) {
       const outSideHandler = (event: MouseEvent) => {
         const el = ref.current;
         if (el && !el.contains(event.target as Node)) {
-          setIsOpen(false);
+          setIsOpen?.(false);
         }
       };
       document.addEventListener("click", outSideHandler);

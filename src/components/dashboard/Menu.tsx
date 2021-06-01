@@ -39,11 +39,11 @@ export const Menu = () => {
           <div className="flex-horizontal flex-justify-content-end">
             <div className="bedge profile-menu-container cursor-pointer">
               <i
-                className="far fa-bell"
+                className="icon far fa-bell"
                 onClick={() => setProfileMenu((prevState) => !prevState)}
               />
               <span
-                className="badge-item"
+                className="icon badge-item"
                 onClick={() => setProfileMenu((prevState) => !prevState)}
               >
                 3
@@ -52,18 +52,19 @@ export const Menu = () => {
                 isOpen={profileMenu}
                 setIsOpen={setProfileMenu}
                 navigationOptions={navigationOptions}
+                isModal
               />
             </div>
             <div className="bedge followers-menu-container ">
-              <i className="far fa-envelope" />
+              <i className="icon far fa-envelope" />
               <span className="badge-item">4</span>
             </div>
             <div className="bedge">
-              <i className="fas fa-search" />
+              <i className="icon fas fa-search" />
             </div>
             <div className="bedge cursor-pointer">
               <i
-                className="fas fa-th"
+                className="icon fas fa-th"
                 onClick={() => setFollowersMenu((prevState) => !prevState)}
               />
               <Followers isOpen={followersMenu} setIsOpen={setFollowersMenu} />

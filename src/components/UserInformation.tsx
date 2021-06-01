@@ -3,7 +3,7 @@ import * as React from "react";
 
 export interface User {
   id: number;
-  status: string;
+  status: "idle" | "active";
   name: string;
   role: string;
 }
