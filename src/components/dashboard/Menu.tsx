@@ -33,9 +33,9 @@ export const Menu = () => {
         <img src={Brand} alt="brand" />
         <h1>Infinity</h1>
       </div>
-      <div className="flex-align-items-center  flex-grow flex-horizontal bg-light-blue color-white header-nav">
+      <div className="flex-align-items-center  flex-grow-1 flex-horizontal bg-light-blue color-white header-nav">
         <h3>Dashboard</h3>
-        <div className="flex-grow">
+        <div className="flex-grow-1">
           <div className="flex-horizontal flex-justify-content-end">
             <div className="bedge profile-menu-container cursor-pointer">
               <i

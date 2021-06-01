@@ -1,3 +1,8 @@
+.dashboard-content {
+  padding: 40px;
+  background-color: rgb(237,240,245);
+}
+
 .logo {
   flex-basis: 400px;
   gap: 10px;
@@ -70,4 +75,32 @@
   width: 400px;
   padding-left: 50px;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+// welcome container
+.welcome-container {
+  font-family: 'Raleway', sans-serif;
+  gap: 30px;
+
+  .card {
+    height: 150px;
+    width: 50%;
+    box-shadow: 0 0 1px 0 #b09696;
+    background-color: white;
+  }
+  .title {
+    font-size: 3rem;
+    padding-left: 50px;
+    margin-bottom: 20px;
+  }
+  .subtitle {
+    font-size: 1.5rem;
+    padding-left: 50px;
+  }
+  .count {
+    margin-left: auto;
+    font-weight: 800;
+    font-size: 2rem;
+    margin-right: 60px;
+  }
 }

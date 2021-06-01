@@ -49,7 +49,7 @@ const navigationOptions: NavigationOptionsType = [
 ];
 export const Navbar = () => {
   return (
-    <>
+    <div>
       <div className="flex-vertical flex-justify-content-center current-user">
         <UserInformation
           user={{
@@ -66,6 +66,6 @@ export const Navbar = () => {
         navigationOptions={navigationOptions}
         isModal={false}
       />
-    </>
+    </div>
   );
 };
