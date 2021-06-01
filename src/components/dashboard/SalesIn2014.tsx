@@ -85,26 +85,22 @@ const chartData: ChartProps = {
   },
 };
 
-const App = () => {
+const BarChart = () => {
   return (
     <div className="app">
-      <div className="row">
-        <div className="mixed-chart">
-          <Chart
-            options={chartData.options}
-            series={chartData.series}
-            type="bar"
-            width="500"
-            height="230"
-          />
-        </div>
+      <div className="mixed-chart">
+        <Chart
+          options={chartData.options}
+          series={chartData.series}
+          type="bar"
+          height="230"
+        />
       </div>
     </div>
   );
 };
 
-interface SalesIn2014Props {}
-export const SalesIn2014 = (props: SalesIn2014Props) => {
+export const SalesIn2014 = () => {
   return (
     <div className="flex-horizontal sales-in-2014 widget">
       <div className="first-column">
@@ -119,7 +115,7 @@ export const SalesIn2014 = (props: SalesIn2014Props) => {
       </div>
 
       <div className="second-column">
-        <App />
+        <BarChart />
       </div>
     </div>
   );

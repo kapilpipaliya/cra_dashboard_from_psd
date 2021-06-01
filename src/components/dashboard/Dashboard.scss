@@ -1,6 +1,6 @@
 .dashboard-content {
   padding: 40px;
-  background-color: rgb(237,240,245);
+  background-color: rgb(237, 240, 245);
 }
 
 .logo {
@@ -22,6 +22,7 @@
   .bedge {
     position: relative;
     margin: 10px;
+
     .icon {
       font-size: 25px;
     }
@@ -43,6 +44,7 @@
 .profile-menu-container {
   position: relative;
 }
+
 .followers-menu-container {
   position: relative;
 }
@@ -69,6 +71,7 @@
   }
 
 }
+
 //Navbar
 .current-user {
   height: 200px;
@@ -86,10 +89,12 @@
     width: 50%;
     padding: 1rem;
   }
+
   .subtitle {
     font-size: 95%;
     color: #6a6c6f;
   }
+
   .count {
     margin-left: auto;
     font-weight: 500;
@@ -104,17 +109,21 @@
   .card {
     flex-basis: 360px;
   }
+
   .top-part {
     padding: 1rem;
   }
+
   .subtitle {
     font-size: 0.8rem;
   }
+
   .count {
     margin-left: auto;
     font-weight: 500;
     font-size: 24px;
   }
+
   .footer {
     margin-top: auto;
     height: 50px;
@@ -122,17 +131,21 @@
     justify-content: space-between;
     padding: 0 30px;
     color: white;
+
     &.normal {
-       background: #3f51b5;
+      background: #3f51b5;
     }
+
     &.warning {
-      background: rgb(230,160,0);
+      background: rgb(230, 160, 0);
     }
+
     &.success {
-      background: rgb(76,175,80);
+      background: rgb(76, 175, 80);
     }
+
     &.danger {
-      background: rgb(230,74,25);
+      background: rgb(230, 74, 25);
     }
 
   }
@@ -144,18 +157,162 @@
   gap: 10px;
   padding: 24px;
 
-  .first-column,.second-column {
+  .first-column, .second-column {
     flex-grow: 1;
 
     h3, p {
       margin-bottom: 24px;
     }
+
     p {
       line-height: 1.8;
     }
+
     h3 {
       font-size: 24px;
       color: #188ae2;
+    }
+  }
+
+  .second-column {
+    width: 60%;
+  }
+}
+
+.active-leads {
+  gap: 20px;
+  .first-column {
+    width: 60%;
+  }
+
+  .table {
+    border-top: none;
+    margin-top: -2px;
+    table-layout: fixed;
+    width: 100%;
+    max-width: 100%;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    th {
+      border: none;
+      padding: 8px 0;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: left;
+    }
+
+    td {
+      border: none;
+      padding: 8px 0;
+    }
+
+    .table-icon {
+      margin-right: 6px;
+      color: #ccc;
+    }
+  }
+
+  .second-column {
+    width: 40%;
+
+    .p-b-0 {
+      padding-bottom: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .checkbox {
+      padding-left: 20px;
+      margin-top: 0;
+      margin-bottom: 12px;
+      position: relative;
+      display: block;
+    }
+
+
+    .checkbox label {
+      display: inline-block;
+      vertical-align: middle;
+      padding-left: 5px;
+    }
+
+    .checkbox label {
+      min-height: 20px;
+      margin-bottom: 0;
+      font-weight: normal;
+      cursor: pointer;
+    }
+
+    label {
+      font-size: 14px;
+      max-width: 100%;
+    }
+
+    .new-todo {
+      padding: 24px 16px;
+      background-color: #fdfeff;
+      border-top: 1px solid #eff3fa;
+    }
+
+    .new-todo input {
+      border: none;
+      outline: none;
+      width: 100%;
+      background-color: transparent;
+    }
+
+    input {
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
+
+    .btn {
+      outline: 0;
+
+      font-weight: 500;
+      padding: 6px 12px;
+      font-size: 12px;
+      line-height: 1.5;
+      border-radius: 3px;
+    }
+
+    .btn-success {
+      color: #fff;
+      background-color: #10c469;
+      border-color: #10c469;
+
+      &:hover {
+        color: #fff;
+        background-color: #0da357;
+        border-color: #0b8b4b;
+      }
+    }
+
+    .btn-default {
+      color: #333;
+      background-color: #fff;
+      border-color: #ccc;
+
+      &:hover {
+        color: #333;
+        background-color: #e6e6e6;
+        border-color: #adadad;
+      }
+    }
+
+    .m-r-md {
+      margin-right: 16px;
+    }
+
+    .pull-right {
+      float: right;
     }
   }
 }

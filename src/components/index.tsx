@@ -4,6 +4,7 @@ import { Navbar } from "./dashboard/Navbar";
 import { WelcomeToInfinity } from "./dashboard/WelcomeToInfinity";
 import { ShortcutFuther } from "./dashboard/ShortcutFuther";
 import { SalesIn2014 } from "./dashboard/SalesIn2014";
+import { ActiveLeads } from "./dashboard/ActiveLeads";
 interface DashboardProps {}
 
 export const Dashboard = (props: DashboardProps) => {
@@ -16,6 +17,7 @@ export const Dashboard = (props: DashboardProps) => {
           <WelcomeToInfinity />
           <ShortcutFuther />
           <SalesIn2014 />
+          <ActiveLeads />
         </div>
       </div>
     </>
