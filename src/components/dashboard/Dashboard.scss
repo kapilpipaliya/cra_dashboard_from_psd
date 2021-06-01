@@ -81,11 +81,12 @@
 .welcome-container {
   font-family: 'Raleway', sans-serif;
   gap: 30px;
+  margin-bottom: 30px;
 
   .card {
     height: 150px;
     width: 50%;
-    box-shadow: 0 0 1px 0 #b09696;
+    box-shadow: 0 0 1px 1px rgb(215,224,241);
     background-color: white;
   }
   .title {
@@ -103,4 +104,66 @@
     font-size: 2rem;
     margin-right: 60px;
   }
+}
+
+.shortcut-feature {
+  font-family: 'Raleway', sans-serif;
+  gap: 30px;
+
+  .card {
+    height: 200px;
+    flex-basis: 360px;
+    box-shadow: 0 0 1px 1px rgb(215,224,241);
+    background-color: white;
+  }
+  .title {
+    font-size: 1.5rem;
+    padding-left: 40px;
+    margin: 20px 0;
+    font-weight: 600;
+    &.normal {
+       color: #3f51b5;
+    }
+    &.warning {
+      color: rgb(230,160,0);
+    }
+    &.success {
+      color: rgb(76,175,80);
+    }
+    &.danger {
+      color: rgb(230,74,25);
+    }
+  }
+  .subtitle {
+    font-size: 0.8rem;
+    padding-left: 40px;
+  }
+  .count {
+    margin-left: auto;
+    font-weight: 800;
+    font-size: 2rem;
+    margin-right: 30px;
+  }
+  .footer {
+    margin-top: auto;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    color: white;
+    &.normal {
+       background: #3f51b5;
+    }
+    &.warning {
+      background: rgb(230,160,0);
+    }
+    &.success {
+      background: rgb(76,175,80);
+    }
+    &.danger {
+      background: rgb(230,74,25);
+    }
+
+  }
+
 }
