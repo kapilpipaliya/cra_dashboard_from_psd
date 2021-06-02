@@ -1,122 +1,114 @@
 import * as React from "react";
 import ReactApexChart from "react-apexcharts";
-type ChartProps = React.ComponentProps<typeof ReactApexChart>;
-const chartData: ChartProps = {
-  series: [
-    {
-      name: "Likes",
-      data: [4, 3, 10, 9, 29, 19, 22, 9, 12, 7, 19, 5, 13, 9, 17, 2, 7, 5],
+import { ApexOptions } from "apexcharts";
+
+const chartSeries: Array<any> = [
+  {
+    name: "TEAM A",
+    type: "line",
+    data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39],
+  },
+];
+
+const chartOptions: ApexOptions = {
+  chart: {
+    height: 350,
+    type: "line",
+    stacked: false,
+    toolbar: {
+      show: false,
     },
+    zoom: {
+      enabled: false,
+    },
+  },
+  stroke: {
+    width: [5],
+    curve: "smooth",
+  },
+  plotOptions: {
+    bar: {
+      columnWidth: "50%",
+    },
+  },
+  fill: {
+    opacity: [0.85, 0.25, 1],
+    gradient: {
+      inverseColors: false,
+      shade: "light",
+      type: "vertical",
+      opacityFrom: 0.85,
+      opacityTo: 0.55,
+      stops: [0, 100, 100, 100],
+    },
+  },
+  labels: [
+    "01/01/2003",
+    "02/01/2003",
+    "03/01/2003",
+    "04/01/2003",
+    "05/01/2003",
+    "06/01/2003",
+    "07/01/2003",
+    "08/01/2003",
+    "09/01/2003",
+    "10/01/2003",
+    "11/01/2003",
   ],
-  options: {
-    chart: {
-      height: 350,
-      type: "line",
-    },
-    stroke: {
-      width: 7,
-      curve: "smooth",
-    },
-    xaxis: {
-      type: "datetime",
-      categories: [
-        "1/11/2000",
-        "2/11/2000",
-        "3/11/2000",
-        "4/11/2000",
-        "5/11/2000",
-        "6/11/2000",
-        "7/11/2000",
-        "8/11/2000",
-        "9/11/2000",
-        "10/11/2000",
-        "11/11/2000",
-        "12/11/2000",
-        "1/11/2001",
-        "2/11/2001",
-        "3/11/2001",
-        "4/11/2001",
-        "5/11/2001",
-        "6/11/2001",
-      ],
-      tickAmount: 10,
-      labels: {
-        formatter: function (value, timestamp, opts) {
-          return opts.dateFormatter(new Date(timestamp!), "dd MMM");
-        },
-      },
-    },
+  markers: {
+    size: 0,
+  },
+  xaxis: {
+    type: "datetime",
+  },
+  yaxis: {
     title: {
-      text: "Social Media",
-      align: "left",
-      style: {
-        fontSize: "16px",
-        color: "#666",
-      },
+      text: "Points",
     },
-    fill: {
-      type: "gradient",
-      gradient: {
-        shade: "dark",
-        gradientToColors: ["#FDD835"],
-        shadeIntensity: 1,
-        type: "horizontal",
-        opacityFrom: 1,
-        opacityTo: 1,
-        stops: [0, 100, 100, 100],
-      },
-    },
-    markers: {
-      size: 4,
-      colors: ["#FFA41B"],
-      strokeColors: "#fff",
-      strokeWidth: 2,
-      hover: {
-        size: 7,
-      },
-    },
-    yaxis: {
-      min: -10,
-      max: 40,
-      title: {
-        text: "Engagement",
+    min: 0,
+  },
+  tooltip: {
+    shared: true,
+    intersect: false,
+    y: {
+      formatter: function (y) {
+        if (typeof y !== "undefined") {
+          return y.toFixed(0) + " points";
+        }
+        return y;
       },
     },
   },
 };
 
-const BarChart = () => {
-  return (
-    <div className="app">
-      <div className="mixed-chart">
-        <ReactApexChart
-          options={chartData.options}
-          series={chartData.series}
-          type="bar"
-          height="230"
-        />
+const BarChart = () => (
+  <div className="app">
+    <div className="mixed-chart">
+      <ReactApexChart
+        options={chartOptions}
+        series={chartSeries}
+        type="line"
+        height="280"
+      />
+    </div>
+  </div>
+);
+
+export const SalesIn2014 = () => (
+  <div className="flex-horizontal sales-in-2014 widget">
+    <div className="first-column">
+      <div>
+        <h3 className="widget-title">Sales in 2014</h3>
+        <p className="">
+          Collaboratively administrate empowered markets via plug-and-play
+          networks. Dynamically procrastinate B2C users after installed base
+          benefits
+        </p>
       </div>
     </div>
-  );
-};
 
-export const SalesIn2014 = () => {
-  return (
-    <div className="flex-horizontal sales-in-2014 widget">
-      <div className="first-column">
-        <div>
-          <h3 className="widget-title">Sales in 2014</h3>
-          <p className="">
-            Collaboratively administrate empowered markets via plug-and-play
-            networks. Dynamically procrastinate B2C users after installed base
-            benefits
-          </p>
-        </div>
-      </div>
-
-      <div className="second-column">
-        <BarChart />
-      </div>
+    <div className="second-column">
+      <BarChart />
     </div>
-  );
-};
+  </div>
+);

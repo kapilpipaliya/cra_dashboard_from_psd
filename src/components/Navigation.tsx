@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useRef } from "react";
-import { useOutSideClick } from "../hooks/useOutSideClick";
 import clsx from "clsx";
+import { useOutSideClick } from "../hooks/useOutSideClick";
 
 export type NavigationOptionsType = {
   id: number;
@@ -24,6 +24,7 @@ export const Navigation = (props: NavigationProps) => {
   const menuDivRef = useRef<HTMLDivElement>(null);
   const { isOpen, setIsOpen, navigationOptions, isModal } = props;
   useOutSideClick(menuDivRef, isOpen, setIsOpen);
+
   return (
     <div
       ref={menuDivRef}

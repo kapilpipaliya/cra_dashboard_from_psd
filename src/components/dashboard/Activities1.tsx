@@ -1,6 +1,7 @@
 import * as React from "react";
 import ReactApexChart from "react-apexcharts";
 import { ApexOptions } from "apexcharts";
+
 const chartOptions: ApexOptions = {
   chart: {
     type: "bar",
@@ -45,6 +46,7 @@ const chartOptions: ApexOptions = {
     },
   },
 };
+
 const chartSeries: Array<any> = [
   {
     name: "Customers",
@@ -82,18 +84,17 @@ const chartSeries: Array<any> = [
   },
 ];
 
-const StackedColumnsCharts = () => {
-  return (
-    <div id="chart">
-      <ReactApexChart
-        options={chartOptions}
-        series={chartSeries}
-        type="bar"
-        height={320}
-      />
-    </div>
-  );
-};
+const StackedColumnsCharts = () => (
+  <div id="chart">
+    <ReactApexChart
+      options={chartOptions}
+      series={chartSeries}
+      type="bar"
+      height={320}
+    />
+  </div>
+);
+
 const browserUsagePieChartOptions: ApexOptions = {
   chart: {
     width: 120,
@@ -114,90 +115,87 @@ const browserUsagePieChartOptions: ApexOptions = {
     },
   ],
 };
-const BrowserUsagePieChart = () => {
-  return (
-    <div id="chart">
-      <ReactApexChart
-        options={browserUsagePieChartOptions}
-        series={[60, 30, 10]}
-        type="pie"
-        height={120}
-      />
-    </div>
-  );
-};
 
-export const Activities1 = () => {
-  return (
-    <div className="flex-horizontal activities1">
-      <div className="flex-vertical first-column">
-        <div className="widget">
-          <header className="widget-header">
-            <h4 className="widget-title">Activities</h4>
-          </header>
-          <hr className="widget-separator" />
-          <div className="widget-body">
-            <div className="streamline">
-              <div className="sl-item sl-primary">
-                <div className="sl-content">
-                  <small className="text-muted">23 mins ago</small>
-                  <p>John has just started working on the project</p>
-                </div>
-              </div>
+const BrowserUsagePieChart = () => (
+  <div id="chart">
+    <ReactApexChart
+      options={browserUsagePieChartOptions}
+      series={[60, 30, 10]}
+      type="pie"
+      height={120}
+    />
+  </div>
+);
 
-              <div className="sl-item sl-danger">
-                <div className="sl-content">
-                  <small className="text-muted">23 mins ago</small>
-                  <p>Jane sent you invitation to attend the party</p>
-                </div>
-              </div>
-
-              <div className="sl-item sl-success">
-                <div className="sl-content">
-                  <small className="text-muted">23 mins ago</small>
-                  <p>Sally added you to her circles</p>
-                </div>
-              </div>
-
-              <div className="sl-item sl-warning">
-                <div className="sl-content">
-                  <small className="text-muted">23 mins ago</small>
-                  <p>Sara has finished her task</p>
-                </div>
+export const Activities1 = () => (
+  <div className="flex-horizontal activities1">
+    <div className="flex-vertical first-column">
+      <div className="widget">
+        <header className="widget-header">
+          <h4 className="widget-title">Activities</h4>
+        </header>
+        <hr className="widget-separator" />
+        <div className="widget-body">
+          <div className="streamline">
+            <div className="sl-item sl-primary">
+              <div className="sl-content">
+                <small className="text-muted">23 mins ago</small>
+                <p>John has just started working on the project</p>
               </div>
             </div>
-          </div>
-        </div>
 
-        <div className="widget google-chart">
-          <header className="widget-header">
-            <h4 className="widget-title">Activities</h4>
-          </header>
-          <hr className="widget-separator" />
-          <div className="widget-body">
-            <div className="flex-horizontal pie-chart">
-              <BrowserUsagePieChart />
-              <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam
+            <div className="sl-item sl-danger">
+              <div className="sl-content">
+                <small className="text-muted">23 mins ago</small>
+                <p>Jane sent you invitation to attend the party</p>
+              </div>
+            </div>
+
+            <div className="sl-item sl-success">
+              <div className="sl-content">
+                <small className="text-muted">23 mins ago</small>
+                <p>Sally added you to her circles</p>
+              </div>
+            </div>
+
+            <div className="sl-item sl-warning">
+              <div className="sl-content">
+                <small className="text-muted">23 mins ago</small>
+                <p>Sara has finished her task</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="second-column">
-        <div className="widget google-chart">
-          <header className="widget-header">
-            <h4 className="widget-title">Analytics</h4>
-          </header>
-          <hr className="widget-separator" />
-          <div className="widget-body">
-            <StackedColumnsCharts />
+      <div className="widget google-chart">
+        <header className="widget-header">
+          <h4 className="widget-title">Activities</h4>
+        </header>
+        <hr className="widget-separator" />
+        <div className="widget-body">
+          <div className="flex-horizontal pie-chart">
+            <BrowserUsagePieChart />
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam
+            </div>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+
+    <div className="second-column">
+      <div className="widget google-chart">
+        <header className="widget-header">
+          <h4 className="widget-title">Analytics</h4>
+        </header>
+        <hr className="widget-separator" />
+        <div className="widget-body">
+          <StackedColumnsCharts />
+        </div>
+      </div>
+    </div>
+  </div>
+);

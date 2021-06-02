@@ -1,11 +1,13 @@
 import * as React from "react";
 import { useRef, useState } from "react";
-import "./Dashboard.scss";
-import Brand from "../../images/Brand.png";
 import clsx from "clsx";
+
 import { useOutSideClick } from "../../hooks/useOutSideClick";
 import { Navigation, NavigationOptionsType } from "../Navigation";
 import { User, UserInformation } from "../UserInformation";
+
+import Brand from "../../images/Brand.png";
+import "./Dashboard.scss";
 
 const navigationOptions: NavigationOptionsType = [
   { id: 1, iconClassName: "fas fa-user", title: "My Profile" },
@@ -23,6 +25,7 @@ const navigationOptions: NavigationOptionsType = [
   { id: 6, iconClassName: "fas fa-calendar-alt", title: "Events" },
   { id: 7, iconClassName: "fas fa-users-cog", title: "Account settings" },
 ];
+
 export const Menu = () => {
   const [profileMenu, setProfileMenu] = useState(false);
   const [followersMenu, setFollowersMenu] = useState(false);
@@ -80,6 +83,7 @@ interface FollowersProps {
   isOpen: boolean;
   setIsOpen: (v: boolean) => void;
 }
+
 const users: User[] = [
   {
     id: 1,
@@ -177,12 +181,14 @@ export const Followers = (props: FollowersProps) => {
   const menuDivRef = useRef<HTMLDivElement>(null);
   const { isOpen, setIsOpen } = props;
   useOutSideClick(menuDivRef, isOpen, setIsOpen);
+
   return (
     <div
       ref={menuDivRef}
       className={clsx(
         "flex-vertical followers-menu color-black",
-        !isOpen && "display-none"
+        !isOpen && "display-none",
+        "modal"
       )}
     >
       <div className="header flex-vertical flex-justify-content-center">

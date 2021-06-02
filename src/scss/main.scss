@@ -74,13 +74,14 @@ body {
   position: absolute;
   top: 65px;
   right: 0;
+  z-index: 1;
+  background-color: white;
 }
 
 .navigation-menu {
   width: 400px;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
   gap: 2px;
-  z-index: 1;
   background-color: white;
   border-radius: 5px;
   cursor: auto;

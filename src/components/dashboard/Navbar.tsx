@@ -47,25 +47,24 @@ const navigationOptions: NavigationOptionsType = [
   },
   { id: 12, iconClassName: "far fa-file-alt", title: "HTML Version" },
 ];
-export const Navbar = () => {
-  return (
-    <div>
-      <div className="flex-vertical flex-justify-content-center current-user">
-        <UserInformation
-          user={{
-            id: 1,
-            status: "active",
-            role: "Founder of App",
-            name: "MOHAMED SAID",
-          }}
-        />
-      </div>
-      <Navigation
-        isOpen={true}
-        setIsOpen={() => 0}
-        navigationOptions={navigationOptions}
-        isModal={false}
+
+export const Navbar = () => (
+  <div>
+    <div className="flex-vertical flex-justify-content-center current-user">
+      <UserInformation
+        user={{
+          id: 1,
+          status: "active",
+          role: "Founder of App",
+          name: "MOHAMED SAID",
+        }}
       />
     </div>
-  );
-};
+    <Navigation
+      isOpen={true}
+      setIsOpen={() => 0}
+      navigationOptions={navigationOptions}
+      isModal={false}
+    />
+  </div>
+);
