@@ -94,7 +94,7 @@ const BarChart = () => (
   </div>
 );
 
-export const SalesIn2014 = () => (
+export const Sales = () => (
   <div className="flex-horizontal sales-in-2014 widget">
     <div className="first-column">
       <div>

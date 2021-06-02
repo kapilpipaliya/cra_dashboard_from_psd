@@ -5,9 +5,9 @@ import { Menu } from "./dashboard/Menu";
 import { Navbar } from "./dashboard/Navbar";
 import { WelcomeToInfinity } from "./dashboard/WelcomeToInfinity";
 import { ShortcutFeature } from "./dashboard/ShortcutFeature";
-import { SalesIn2014 } from "./dashboard/SalesIn2014";
+import { Sales } from "./dashboard/Sales";
 import { ActiveLeads } from "./dashboard/ActiveLeads";
-import { Activities1 } from "./dashboard/Activities1";
+import { ActivitiesReport } from "./dashboard/ActivitiesReport";
 import { Footer } from "./dashboard/Footer";
 
 export const Dashboard = () => {
@@ -25,9 +25,9 @@ export const Dashboard = () => {
         >
           <WelcomeToInfinity />
           <ShortcutFeature />
-          <SalesIn2014 />
+          <Sales />
           <ActiveLeads />
-          <Activities1 />
+          <ActivitiesReport />
           <Footer />
         </div>
       </div>

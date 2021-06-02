@@ -128,7 +128,7 @@ const BrowserUsagePieChart = () => (
   </div>
 );
 
-export const Activities1 = () => (
+export const ActivitiesReport = () => (
   <div className="flex-horizontal activities1">
     <div className="flex-vertical first-column">
       <div className="widget">
