@@ -1,5 +1,98 @@
 import * as React from "react";
 
+interface Lead {
+  text_color: string;
+  type: string;
+  lead_name: string;
+  views: number;
+  favorites: number;
+  last_visit: string;
+  last_action_type: string;
+  last_action: string;
+}
+const leadData: Lead[] = [
+  {
+    text_color: "text-primary",
+    type: "Buyer",
+    lead_name: "Denise Ann",
+    views: 150,
+    favorites: 150,
+    last_visit: "9:23 AM",
+    last_action_type: "email",
+    last_action: "11/9/2015",
+  },
+  {
+    text_color: "text-primary",
+    type: "Buyer",
+    lead_name: "Denise Ann",
+    views: 150,
+    favorites: 202,
+    last_visit: "9:23 AM",
+    last_action_type: "email",
+    last_action: "11/9/2015",
+  },
+  {
+    text_color: "text-success",
+    type: "Landlord",
+    lead_name: "Denise Ann",
+    views: 150,
+    favorites: 313,
+    last_visit: "9:23 AM",
+    last_action_type: "email",
+    last_action: "11/9/2015",
+  },
+  {
+    text_color: "text-primary",
+    type: "Buyer",
+    lead_name: "Denise Ann",
+    views: 150,
+    favorites: 175,
+    last_visit: "9:23 AM",
+    last_action_type: "email",
+    last_action: "11/9/2015",
+  },
+  {
+    text_color: "text-danger",
+    type: "Seller",
+    lead_name: "Denise Ann",
+    views: 150,
+    favorites: 148,
+    last_visit: "9:23 AM",
+    last_action_type: "email",
+    last_action: "11/9/2015",
+  },
+  {
+    text_color: "text-primary",
+    type: "Buyer",
+    lead_name: "Denise Ann",
+    views: 150,
+    favorites: 1500,
+    last_visit: "9:23 AM",
+    last_action_type: "email",
+    last_action: "11/9/2015",
+  },
+  {
+    text_color: "text-primary",
+    type: "Buyer",
+    lead_name: "Denise Ann",
+    views: 150,
+    favorites: 1270,
+    last_visit: "9:23 AM",
+    last_action_type: "email",
+    last_action: "11/9/2015",
+  },
+  {
+    text_color: "text-danger",
+    type: "Buyer",
+    lead_name: "Denise Ann",
+    views: 150,
+    favorites: 3201,
+    last_visit: "9:23 AM",
+    last_action_type: "email",
+    last_action: "11/9/2015",
+  },
+];
+
 export const ActiveLeads = () => (
   <div className="flex-horizontal active-leads">
     <div className="first-column">
@@ -21,86 +114,21 @@ export const ActiveLeads = () => (
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td className="text-primary">Buyer</td>
-                <td>Denise Ann</td>
-                <td>150</td>
-                <td>150</td>
-                <td>9:23 AM</td>
-                <td>
-                  <span className="table-icon fa fa-envelope"></span> 11/9/2015
-                </td>
-              </tr>
-              <tr>
-                <td className="text-primary">Buyer</td>
-                <td>Denise Ann</td>
-                <td>150</td>
-                <td>202</td>
-                <td>9:23 AM</td>
-                <td>
-                  <span className="table-icon fa fa-envelope"></span> 11/9/2015
-                </td>
-              </tr>
-              <tr>
-                <td className="text-success">Landlord</td>
-                <td>Denise Ann</td>
-                <td>150</td>
-                <td>313</td>
-                <td>9:23 AM</td>
-                <td>
-                  <span className="table-icon fa fa-envelope"></span> 11/9/2015
-                </td>
-              </tr>
-              <tr>
-                <td className="text-primary">Buyer</td>
-                <td>Denise Ann</td>
-                <td>150</td>
-                <td>175</td>
-                <td>9:23 AM</td>
-                <td>
-                  <span className="table-icon fa fa-envelope"></span> 11/9/2015
-                </td>
-              </tr>
-              <tr>
-                <td className="text-danger">Seller</td>
-                <td>Denise Ann</td>
-                <td>150</td>
-                <td>148</td>
-                <td>9:23 AM</td>
-                <td>
-                  <span className="table-icon fa fa-envelope"></span> 11/9/2015
-                </td>
-              </tr>
-              <tr>
-                <td className="text-primary">Buyer</td>
-                <td>Denise Ann</td>
-                <td>150</td>
-                <td>1500</td>
-                <td>9:23 AM</td>
-                <td>
-                  <span className="table-icon fa fa-envelope"></span> 11/9/2015
-                </td>
-              </tr>
-              <tr>
-                <td className="text-primary">Buyer</td>
-                <td>Denise Ann</td>
-                <td>150</td>
-                <td>1270</td>
-                <td>9:23 AM</td>
-                <td>
-                  <span className="table-icon fa fa-envelope"></span> 11/9/2015
-                </td>
-              </tr>
-              <tr>
-                <td className="text-danger">Buyer</td>
-                <td>Denise Ann</td>
-                <td>150</td>
-                <td>3201</td>
-                <td>9:23 AM</td>
-                <td>
-                  <span className="table-icon fa fa-envelope"></span> 11/9/2015
-                </td>
-              </tr>
+              {leadData.map((lead) => (
+                <tr>
+                  <td className={lead.text_color}>{lead.type}</td>
+                  <td>{lead.lead_name}</td>
+                  <td>{lead.views}</td>
+                  <td>{lead.favorites}</td>
+                  <td>{lead.last_visit}</td>
+                  <td>
+                    {lead.last_action_type && (
+                      <span className="table-icon fa fa-envelope"></span>
+                    )}
+                    {lead.last_action}
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
