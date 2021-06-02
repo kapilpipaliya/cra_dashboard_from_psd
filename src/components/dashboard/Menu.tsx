@@ -157,24 +157,6 @@ const users: User[] = [
     name: "Mogen Polish",
     role: "Art Director, Movie cutter",
   },
-  {
-    id: 13,
-    status: "idle",
-    name: "Chris Fox",
-    role: "Designer, Blogger",
-  },
-  {
-    id: 14,
-    status: "idle",
-    name: "Mohmed Said",
-    role: "UI/UX Developer",
-  },
-  {
-    id: 15,
-    status: "active",
-    name: "Mogen Polish",
-    role: "Art Director, Movie cutter",
-  },
 ];
 
 export const Followers = (props: FollowersProps) => {
