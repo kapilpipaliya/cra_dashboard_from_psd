@@ -196,6 +196,10 @@ body {
   .widget-footer {
     background-color: #f0f4fb;
   }
+  small {
+    font-size: 95%;
+    font-weight: 500;
+  }
 }
 
 .widget-title {
@@ -225,6 +229,74 @@ body {
 .widget-body,
 .widget-footer {
   padding: 1rem;
+}
+$primary:   #188ae2;
+$success:   #10c469;
+$warning:   #f9c851;
+$danger:    #ff5b5b;
+// StreamLine widgets
+.sl-item{
+  position: relative;
+  padding-bottom: 12px;
+  border-left: 1px solid #ccc;
+  &:before{
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 0;
+    background-color: #ccc;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+  }
+  &:last-child:after{
+    content: '';
+    position: absolute;
+    left: -3px;
+    bottom: 0;
+    background-color: #ccc;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+  }
+  .sl-content{
+    margin-left: 24px;
+    p{
+      margin: 0;
+    }
+  }
+}
+
+.sl-primary{
+  border-left-color: $primary;
+  &:before,
+  &:last-child:after{
+    background-color: $primary;
+  }
+}
+
+.sl-success{
+  border-left-color: $success;
+  &:before,
+  &:last-child:after{
+    background-color: $success;
+  }
+}
+
+.sl-warning{
+  border-left-color: $warning;
+  &:before,
+  &:last-child:after{
+    background-color: $warning;
+  }
+}
+
+.sl-danger{
+  border-left-color: $danger;
+  &:before,
+  &:last-child:after{
+    background-color: $danger;
+  }
 }
 
 h3.widget-title {

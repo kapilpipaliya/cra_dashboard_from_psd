@@ -13,7 +13,7 @@ const Card = (props: CardProps) => {
     <div className="flex-vertical widget card">
       <div className="flex-horizontal flex-align-items-center top-part">
         <div className="flex-vertical">
-          <div className={clsx("widget-title", variant)}>{title}</div>
+          <h3 className={clsx("widget-title", variant)}>{title}</h3>
           <div className="subtitle">{subtitle}</div>
         </div>
         <div className="count">

@@ -316,3 +316,16 @@
     }
   }
 }
+
+.activities1 {
+  gap: 20px;
+  .first-column{
+    width: 50%;
+  }
+  .second-column {
+    width: 50%;
+  }
+  .pie-chart {
+    gap: 10px;
+  }
+}

@@ -144,7 +144,7 @@ export const ActiveLeads = () => {
 
               <li className="todo-item">
                 <div className="checkbox checkbox-warning">
-                  <input type="checkbox" id="checkbox4" checked />
+                  <input type="checkbox" id="checkbox4" defaultChecked />
                   <label htmlFor="checkbox4">
                     Decide The Live Discussion Time
                   </label>
@@ -153,7 +153,7 @@ export const ActiveLeads = () => {
 
               <li className="todo-item">
                 <div className="checkbox checkbox-success">
-                  <input type="checkbox" id="checkbox3" checked />
+                  <input type="checkbox" id="checkbox3" defaultChecked />
                   <label htmlFor="checkbox3">
                     Prepare For The Next Project
                   </label>
@@ -162,7 +162,7 @@ export const ActiveLeads = () => {
 
               <li className="todo-item">
                 <div className="checkbox checkbox-danger">
-                  <input type="checkbox" id="checkbox5" checked />
+                  <input type="checkbox" id="checkbox5" defaultChecked />
                   <label htmlFor="checkbox5">
                     Finish Up AngularJs Tutorial
                   </label>
@@ -171,7 +171,7 @@ export const ActiveLeads = () => {
 
               <li className="todo-item">
                 <div className="checkbox checkbox-purple">
-                  <input type="checkbox" id="checkbox1" checked />
+                  <input type="checkbox" id="checkbox1" defaultChecked />
                   <label htmlFor="checkbox1">Finish Infinity Project</label>
                 </div>
               </li>

@@ -5,6 +5,7 @@ import { WelcomeToInfinity } from "./dashboard/WelcomeToInfinity";
 import { ShortcutFuther } from "./dashboard/ShortcutFuther";
 import { SalesIn2014 } from "./dashboard/SalesIn2014";
 import { ActiveLeads } from "./dashboard/ActiveLeads";
+import { Activities1 } from "./dashboard/Activities1";
 interface DashboardProps {}
 
 export const Dashboard = (props: DashboardProps) => {
@@ -18,6 +19,7 @@ export const Dashboard = (props: DashboardProps) => {
           <ShortcutFuther />
           <SalesIn2014 />
           <ActiveLeads />
+          <Activities1 />
         </div>
       </div>
     </>

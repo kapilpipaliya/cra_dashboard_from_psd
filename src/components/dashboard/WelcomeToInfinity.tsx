@@ -12,7 +12,7 @@ const Card = (props: CardProps) => {
   return (
     <div className="flex-horizontal flex-align-items-center widget card">
       <div className="flex-vertical">
-        <div className="widget-title">{title}</div>
+        <h3 className="widget-title">{title}</h3>
         <div className="subtitle">{subtitle}</div>
       </div>
       <div className="count">{count}</div>

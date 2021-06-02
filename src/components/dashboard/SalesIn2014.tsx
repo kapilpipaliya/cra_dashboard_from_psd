@@ -1,6 +1,6 @@
 import * as React from "react";
-import Chart from "react-apexcharts";
-type ChartProps = React.ComponentProps<typeof Chart>;
+import ReactApexChart from "react-apexcharts";
+type ChartProps = React.ComponentProps<typeof ReactApexChart>;
 const chartData: ChartProps = {
   series: [
     {
@@ -89,7 +89,7 @@ const BarChart = () => {
   return (
     <div className="app">
       <div className="mixed-chart">
-        <Chart
+        <ReactApexChart
           options={chartData.options}
           series={chartData.series}
           type="bar"
