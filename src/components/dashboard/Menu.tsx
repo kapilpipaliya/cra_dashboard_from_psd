@@ -26,52 +26,63 @@ const navigationOptions: NavigationOptionsType = [
   { id: 7, iconClassName: "fas fa-users-cog", title: "Account settings" },
 ];
 
-export const Menu = () => {
+interface MenuProps {
+  sidebarOpen: boolean;
+  setSidebarOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export const Menu = (props: MenuProps) => {
   const [profileMenu, setProfileMenu] = useState(false);
   const [followersMenu, setFollowersMenu] = useState(false);
+  const { sidebarOpen, setSidebarOpen } = props;
 
   return (
-    <div className="flex-horizontal">
-      <div className="bg-blue color-white flex-align-items-center flex-horizontal logo">
-        <img src={Brand} alt="brand" />
-        <h1>Infinity</h1>
-      </div>
-      <div className="flex-align-items-center  flex-grow-1 flex-horizontal bg-light-blue color-white header-nav">
-        <h3>Dashboard</h3>
-        <div className="flex-grow-1">
-          <div className="flex-horizontal flex-justify-content-end">
-            <div className="bedge profile-menu-container cursor-pointer">
-              <i
-                className="icon far fa-bell"
-                onClick={() => setProfileMenu((prevState) => !prevState)}
-              />
-              <span
-                className="icon badge-item"
-                onClick={() => setProfileMenu((prevState) => !prevState)}
-              >
-                3
-              </span>
-              <Navigation
-                isOpen={profileMenu}
-                setIsOpen={setProfileMenu}
-                navigationOptions={navigationOptions}
-                isModal
-              />
-            </div>
-            <div className="bedge followers-menu-container ">
-              <i className="icon far fa-envelope" />
-              <span className="badge-item">4</span>
-            </div>
-            <div className="bedge">
-              <i className="icon fas fa-search" />
-            </div>
-            <div className="bedge cursor-pointer">
-              <i
-                className="icon fas fa-th"
-                onClick={() => setFollowersMenu((prevState) => !prevState)}
-              />
-              <Followers isOpen={followersMenu} setIsOpen={setFollowersMenu} />
-            </div>
+    <div
+      className={clsx(
+        "flex-horizontal flex-align-items-center  flex-grow-1 bg-light-blue color-white header-nav",
+        sidebarOpen ? "shift-right" : ""
+      )}
+    >
+      <span
+        className="hamburger-box"
+        onClick={() => setSidebarOpen((prevState) => !prevState)}
+      >
+        <i className="fas fa-bars"></i>
+      </span>
+      <h5>Dashboard</h5>
+      <div className="flex-grow-1">
+        <div className="flex-horizontal flex-justify-content-end menu-actions">
+          <div className="bedge profile-menu-container cursor-pointer">
+            <i
+              className="icon far fa-bell"
+              onClick={() => setProfileMenu((prevState) => !prevState)}
+            />
+            <span
+              className="icon badge-item"
+              onClick={() => setProfileMenu((prevState) => !prevState)}
+            >
+              3
+            </span>
+            <Navigation
+              isOpen={profileMenu}
+              setIsOpen={setProfileMenu}
+              navigationOptions={navigationOptions}
+              isModal
+            />
+          </div>
+          <div className="bedge followers-menu-container ">
+            <i className="icon far fa-envelope" />
+            <span className="badge-item">4</span>
+          </div>
+          <div className="bedge">
+            <i className="icon fas fa-search" />
+          </div>
+          <div className="bedge cursor-pointer">
+            <i
+              className="icon fas fa-th"
+              onClick={() => setFollowersMenu((prevState) => !prevState)}
+            />
+            <Followers isOpen={followersMenu} setIsOpen={setFollowersMenu} />
           </div>
         </div>
       </div>
@@ -168,9 +179,10 @@ export const Followers = (props: FollowersProps) => {
     <div
       ref={menuDivRef}
       className={clsx(
-        "flex-vertical followers-menu color-black",
+        "flex-vertical color-black ",
         !isOpen && "display-none",
-        "modal"
+        "modal",
+        "followers-menu"
       )}
     >
       <div className="header flex-vertical flex-justify-content-center">

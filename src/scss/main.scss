@@ -1,6 +1,7 @@
 @use "@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @use "@fortawesome/fontawesome-free/scss/solid.scss";
 @use "@fortawesome/fontawesome-free/scss/regular.scss";
+@use "@fortawesome/fontawesome-free/scss/brands.scss";
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;800&display=swap');
 
@@ -23,6 +24,10 @@ body {
 .flex-horizontal {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  @media(min-width: 700px){
+    flex-wrap: unset;
+  }
 }
 
 .flex-vertical {
@@ -71,15 +76,48 @@ body {
 }
 
 .modal {
-  position: absolute;
   top: 65px;
-  right: 0;
   z-index: 1;
   background-color: white;
+
+  position: fixed;
+  right: 0;
+  left: 0;
+  width: auto;
+
+  @media(min-width: 700px) {
+    width: 250px;
+    position: absolute;
+    left: unset;
+  }
+}
+
+$menu-bar-width: 250px;
+.menubar-in {
+  left: 0 !important;
+}
+
+.shift-right {
+  margin-left: 225px;
+  @media(min-width: 700px){
+    margin-left: 250px;
+  }
+}
+
+.side-bar {
+  position: fixed;
+  left: -$menu-bar-width;
+  top: 0;
+  z-index: 1;
+  @media(min-width: 700px) {
+    width: $menu-bar-width;
+    //left: 0;
+  }
 }
 
 .navigation-menu {
-  width: 250px;
+
+  width: auto;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
   gap: 2px;
   background-color: white;
@@ -87,12 +125,12 @@ body {
   cursor: auto;
 
   .list-item {
-    padding-left: 16px;
-    gap: 10px;
+    padding-left: 14px;
+    gap: 8px;
     cursor: pointer;
 
     &.menu {
-      height: 50px;
+      padding: 10px 10px;
 
       &:hover {
         background-color: rgb(245, 247, 249);
@@ -100,7 +138,7 @@ body {
     }
 
     &.header {
-      height: 50px;
+      padding: 10px 10px;
       font-size: 0.8rem;
     }
   }
@@ -116,7 +154,7 @@ body {
     border-radius: 5px;
     font-size: 90%;
     margin-left: auto;
-    margin-right: 25px;
+    margin-right: 10px;
     line-height: 1;
 
     &.normal {
@@ -139,6 +177,25 @@ body {
   .divider {
     border: 1px solid rgba(0, 0, 0, 0.1);
     width: 100%;
+  }
+
+  @media(min-width: 700px) {
+
+    .list-item {
+      padding-left: 16px;
+      gap: 10px;
+
+      &.menu {
+        padding: 10px 16px;
+      }
+
+      &.header {
+        padding: 10px 16px;
+      }
+    }
+    .list-count {
+      margin-right: 25px;
+    }
   }
 }
 
@@ -199,6 +256,7 @@ body {
   .widget-footer {
     background-color: #f0f4fb;
   }
+
   small {
     font-size: 95%;
     font-weight: 500;
@@ -233,16 +291,18 @@ body {
 .widget-footer {
   padding: 1rem;
 }
-$primary:   #188ae2;
-$success:   #10c469;
-$warning:   #f9c851;
-$danger:    #ff5b5b;
+
+$primary: #188ae2;
+$success: #10c469;
+$warning: #f9c851;
+$danger: #ff5b5b;
 // StreamLine widgets
-.sl-item{
+.sl-item {
   position: relative;
   padding-bottom: 12px;
   border-left: 1px solid #ccc;
-  &:before{
+
+  &:before {
     content: '';
     position: absolute;
     left: -6px;
@@ -252,7 +312,8 @@ $danger:    #ff5b5b;
     height: 12px;
     border-radius: 100%;
   }
-  &:last-child:after{
+
+  &:last-child:after {
     content: '';
     position: absolute;
     left: -3px;
@@ -262,42 +323,48 @@ $danger:    #ff5b5b;
     height: 6px;
     border-radius: 100%;
   }
-  .sl-content{
+
+  .sl-content {
     margin-left: 24px;
-    p{
+
+    p {
       margin: 0;
     }
   }
 }
 
-.sl-primary{
+.sl-primary {
   border-left-color: $primary;
+
   &:before,
-  &:last-child:after{
+  &:last-child:after {
     background-color: $primary;
   }
 }
 
-.sl-success{
+.sl-success {
   border-left-color: $success;
+
   &:before,
-  &:last-child:after{
+  &:last-child:after {
     background-color: $success;
   }
 }
 
-.sl-warning{
+.sl-warning {
   border-left-color: $warning;
+
   &:before,
-  &:last-child:after{
+  &:last-child:after {
     background-color: $warning;
   }
 }
 
-.sl-danger{
+.sl-danger {
   border-left-color: $danger;
+
   &:before,
-  &:last-child:after{
+  &:last-child:after {
     background-color: $danger;
   }
 }

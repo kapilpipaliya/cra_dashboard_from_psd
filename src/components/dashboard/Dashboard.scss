@@ -1,22 +1,60 @@
 .dashboard-content {
-  padding: 40px;
+  padding: 10px;
   background-color: rgb(237, 240, 245);
+  @media(min-width: 700px) {
+    padding: 40px;
+  }
 }
 
 .logo {
-  flex-basis: 250px;
+  flex-basis: 200px;
+  padding: 7px 20px;
   gap: 10px;
+  text-decoration: none;
+  outline: none;
 
   img {
     width: 50px;
     height: 50px;
     margin-left: 10px;
   }
+
+  .brand-name {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  .brand-icon {
+    float: left;
+    margin-right: .5rem;
+  }
+
+  .brand-icon {
+    display: inline-block;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  @media(min-width: 700px) {
+    flex-basis: 250px;
+  }
 }
 
 .header-nav {
-  h3 {
-    margin-left: 50px;
+  padding: 0 15px;
+  flex-wrap: nowrap !important;
+
+  h5 {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 15px;
+    line-height: 20px;
+    margin: 0;
+  }
+
+  .hamburger-box {
+    padding: 2px;
+    cursor: pointer;
   }
 
   .bedge {
@@ -39,6 +77,18 @@
       text-align: center;
     }
   }
+
+  .menu-actions {
+    flex-wrap: nowrap;
+  }
+
+  @media(min-width: 700px) {
+    padding: 0 30px;
+
+    h5 {
+      font-size: 16px;
+    }
+  }
 }
 
 .profile-menu-container {
@@ -50,7 +100,7 @@
 }
 
 .followers-menu {
-  position: absolute;
+  position: fixed !important;
   top: 60px;
   right: 0;
   width: 400px;
@@ -81,10 +131,13 @@
 // welcome container
 .welcome-container {
   font-family: 'Raleway', sans-serif;
-  gap: 30px;
+  gap: 5px;
+  @media(min-width: 700px) {
+    gap: 20px;
+  }
 
   .card {
-    width: 50%;
+    width: calc(50% - 5px);
     padding: 1rem;
   }
 
@@ -102,7 +155,10 @@
 
 .shortcut-feature {
   font-family: 'Raleway', sans-serif;
-  gap: 30px;
+  gap: 5px;
+  @media(min-width: 700px) {
+    gap: 20px;
+  }
 
   .card {
     flex-grow: 1;
@@ -152,8 +208,11 @@
 
 .sales-in-2014 {
   justify-content: space-between;
-  gap: 10px;
   padding: 24px;
+  gap: 5px;
+  @media(min-width: 700px) {
+    gap: 20px;
+  }
 
   .first-column, .second-column {
     flex-grow: 1;
@@ -178,9 +237,16 @@
 }
 
 .active-leads {
-  gap: 20px;
+  gap: 5px;
+  @media(min-width: 700px) {
+    gap: 20px;
+  }
+
   .first-column {
-    width: 60%;
+    width: 100%;
+    @media(min-width: 700px) {
+      gap: 60%;
+    }
   }
 
   .table {
@@ -213,7 +279,10 @@
   }
 
   .second-column {
-    width: 40%;
+    width: 100%;
+    @media(min-width: 700px) {
+      gap: 40%;
+    }
 
     .p-b-0 {
       padding-bottom: 0;
@@ -316,36 +385,58 @@
 }
 
 .activities1 {
-  gap: 20px;
-  .first-column{
-    width: 50%;
+  gap: 5px;
+  @media(min-width: 700px) {
+    gap: 20px;
   }
+
+  .first-column {
+    width: 100%;
+  }
+
   .second-column {
-    width: 50%;
+    width: 100%;
   }
+
   .pie-chart {
     gap: 10px;
   }
+
+  @media(min-width: 700px) {
+    .first-column {
+      width: 50%;
+    }
+    .second-column {
+      width: 50%;
+    }
+  }
+
+  .chart-description {
+
+  }
 }
 
-.footer{
+.footer {
   $text-color: #6a6c6f;
   padding: 24px 0 0;
   border-top: 1px solid #cccccc;
 
-  .copyright{
+  .copyright {
     font-weight: 400;
     color: lighten($text-color, 25%);
     letter-spacing: 1.5px;
   }
-  .footer-menu{
+
+  .footer-menu {
     list-style-type: none;
     margin: 0 0 0 auto;
-    li{
+
+    li {
       display: inline-block;
     }
   }
-  ul>li>a{
+
+  ul > li > a {
     display: block;
     padding: 0 .75rem;
     font-weight: 400;

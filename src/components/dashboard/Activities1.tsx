@@ -122,6 +122,7 @@ const BrowserUsagePieChart = () => (
       options={browserUsagePieChartOptions}
       series={[60, 30, 10]}
       type="pie"
+      width={250}
       height={120}
     />
   </div>
@@ -176,7 +177,7 @@ export const Activities1 = () => (
         <div className="widget-body">
           <div className="flex-horizontal pie-chart">
             <BrowserUsagePieChart />
-            <div>
+            <div className="chart-description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam

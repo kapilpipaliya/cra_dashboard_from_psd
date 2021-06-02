@@ -18,11 +18,12 @@ interface NavigationProps {
   setIsOpen?: (v: boolean) => void;
   navigationOptions: NavigationOptionsType;
   isModal?: boolean;
+  className?: string;
 }
 
 export const Navigation = (props: NavigationProps) => {
   const menuDivRef = useRef<HTMLDivElement>(null);
-  const { isOpen, setIsOpen, navigationOptions, isModal } = props;
+  const { isOpen, setIsOpen, navigationOptions, isModal, className } = props;
   useOutSideClick(menuDivRef, isOpen, setIsOpen);
 
   return (
@@ -31,7 +32,8 @@ export const Navigation = (props: NavigationProps) => {
       className={clsx(
         "flex-vertical navigation-menu color-black",
         !isOpen && "display-none",
-        isModal && "modal"
+        isModal && "modal",
+        className
       )}
     >
       {navigationOptions.map((v) => (
