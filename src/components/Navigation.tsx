@@ -36,27 +36,30 @@ export const Navigation = (props: NavigationProps) => {
         className
       )}
     >
-      {navigationOptions.map((v) => (
-        <React.Fragment key={v.id}>
-          {v.divider ? (
+      {navigationOptions.map((navItem) => (
+        <React.Fragment key={navItem.id}>
+          {navItem.divider ? (
             <hr className="divider" />
           ) : (
             <>
-              {v.header ? (
+              {navItem.header ? (
                 <div className="flex-horizontal flex-align-items-center list-item header">
-                  <div>{v.title}</div>
+                  <div>{navItem.title}</div>
                 </div>
               ) : (
                 <div className="flex-horizontal flex-align-items-center list-item menu">
                   <span>
-                    <i className={v.iconClassName} />
+                    <i className={navItem.iconClassName} />
                   </span>
-                  <span className="list-title">{v.title}</span>
-                  {v.count && (
+                  <span className="list-title">{navItem.title}</span>
+                  {navItem.count && (
                     <span
-                      className={clsx("list-count", v.countType || "normal")}
+                      className={clsx(
+                        "list-count",
+                        navItem.countType || "normal"
+                      )}
                     >
-                      {v.count}
+                      {navItem.count}
                     </span>
                   )}
                 </div>

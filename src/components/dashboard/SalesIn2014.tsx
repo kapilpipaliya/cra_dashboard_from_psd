@@ -71,11 +71,11 @@ const chartOptions: ApexOptions = {
     shared: true,
     intersect: false,
     y: {
-      formatter: function (y) {
-        if (typeof y !== "undefined") {
-          return y.toFixed(0) + " points";
+      formatter: function (yValue) {
+        if (typeof yValue !== "undefined") {
+          return yValue.toFixed(0) + " points";
         }
-        return y;
+        return yValue;
       },
     },
   },

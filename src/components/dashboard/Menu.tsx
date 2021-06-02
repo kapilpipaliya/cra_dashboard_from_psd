@@ -6,7 +6,6 @@ import { useOutSideClick } from "../../hooks/useOutSideClick";
 import { Navigation, NavigationOptionsType } from "../Navigation";
 import { User, UserInformation } from "../UserInformation";
 
-import Brand from "../../images/Brand.png";
 import "./Dashboard.scss";
 
 const navigationOptions: NavigationOptionsType = [
@@ -188,9 +187,9 @@ export const Followers = (props: FollowersProps) => {
       <div className="header flex-vertical flex-justify-content-center">
         Followers
       </div>
-      {users.map((u) => (
-        <div key={u.id}>
-          <UserInformation user={u} />
+      {users.map((user) => (
+        <div key={user.id}>
+          <UserInformation user={user} />
         </div>
       ))}
     </div>
