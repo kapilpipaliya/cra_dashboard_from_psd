@@ -20,7 +20,10 @@ export const Navbar = (props: NavbarProps) => {
         sidebarOpen ? "menubar-in" : ""
       )}
     >
-      <a href="/" className="flex-align-items-center flex-horizontal logo">
+      <a
+        href="/"
+        className="bg-blue color-white flex-align-items-center flex-horizontal logo"
+      >
         <span className="brand-icon">
           <i className="fab fa-gg-circle" />
         </span>
