@@ -269,7 +269,7 @@
   .table {
     border-top: none;
     margin-top: -2px;
-    table-layout: fixed;
+    table-layout: auto;
     width: 100%;
     max-width: 100%;
     background-color: transparent;
@@ -282,11 +282,13 @@
       font-size: 14px;
       font-weight: 600;
       text-align: left;
+      min-width: 100px;
     }
 
     td {
       border: none;
       padding: 8px 0;
+      min-width: 100px;
     }
 
     .table-icon {
