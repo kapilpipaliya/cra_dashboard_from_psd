@@ -3,27 +3,13 @@ import { useRef, useState } from "react";
 import clsx from "clsx";
 
 import { useOutSideClick } from "../../hooks/useOutSideClick";
-import { Navigation, NavigationOptionsType } from "../Navigation";
-import { User, UserInformation } from "../UserInformation";
+import { Navigation } from "../Navigation";
+import { UserInformation } from "../UserInformation";
+
+import { profileMenuOptions } from "./data/profileMenu";
+import { followers } from "./data/followers";
 
 import "./Dashboard.scss";
-
-const navigationOptions: NavigationOptionsType = [
-  { id: 1, iconClassName: "fas fa-user", title: "My Profile" },
-  { id: 2, iconClassName: "fas fa-euro-sign", title: "Balance" },
-  {
-    id: 3,
-    iconClassName: "fas fa-globe-americas",
-    title: "Collections",
-    count: 29,
-    countType: "normal",
-  },
-  { id: 4, iconClassName: "fas fa-male", title: "Friends" },
-  { id: 5, divider: true },
-
-  { id: 6, iconClassName: "fas fa-calendar-alt", title: "Events" },
-  { id: 7, iconClassName: "fas fa-users-cog", title: "Account settings" },
-];
 
 interface MenuProps {
   sidebarOpen: boolean;
@@ -46,7 +32,7 @@ export const Menu = (props: MenuProps) => {
         className="hamburger-box"
         onClick={() => setSidebarOpen((prevState) => !prevState)}
       >
-        <i className="fas fa-bars"></i>
+        <i className="fas fa-bars" />
       </span>
       <h5>Dashboard</h5>
       <div className="flex-grow-1">
@@ -65,7 +51,7 @@ export const Menu = (props: MenuProps) => {
             <Navigation
               isOpen={profileMenu}
               setIsOpen={setProfileMenu}
-              navigationOptions={navigationOptions}
+              navigationOptions={profileMenuOptions}
               isModal
             />
           </div>
@@ -94,81 +80,6 @@ interface FollowersProps {
   setIsOpen: (v: boolean) => void;
 }
 
-const users: User[] = [
-  {
-    id: 1,
-    status: "idle",
-    name: "Chris Fox",
-    role: "Designer, Blogger",
-  },
-  {
-    id: 2,
-    status: "idle",
-    name: "Mohmed Said",
-    role: "UI/UX Developer",
-  },
-  {
-    id: 3,
-    status: "active",
-    name: "Mogen Polish",
-    role: "Art Director, Movie cutter",
-  },
-  {
-    id: 4,
-    status: "idle",
-    name: "Chris Fox",
-    role: "Designer, Blogger",
-  },
-  {
-    id: 5,
-    status: "idle",
-    name: "Mohmed Said",
-    role: "UI/UX Developer",
-  },
-  {
-    id: 6,
-    status: "active",
-    name: "Mogen Polish",
-    role: "Art Director, Movie cutter",
-  },
-  {
-    id: 7,
-    status: "idle",
-    name: "Chris Fox",
-    role: "Designer, Blogger",
-  },
-  {
-    id: 8,
-    status: "idle",
-    name: "Mohmed Said",
-    role: "UI/UX Developer",
-  },
-  {
-    id: 9,
-    status: "active",
-    name: "Mogen Polish",
-    role: "Art Director, Movie cutter",
-  },
-  {
-    id: 10,
-    status: "idle",
-    name: "Chris Fox",
-    role: "Designer, Blogger",
-  },
-  {
-    id: 11,
-    status: "idle",
-    name: "Mohmed Said",
-    role: "UI/UX Developer",
-  },
-  {
-    id: 12,
-    status: "active",
-    name: "Mogen Polish",
-    role: "Art Director, Movie cutter",
-  },
-];
-
 export const Followers = (props: FollowersProps) => {
   const menuDivRef = useRef<HTMLDivElement>(null);
   const { isOpen, setIsOpen } = props;
@@ -187,7 +98,7 @@ export const Followers = (props: FollowersProps) => {
       <div className="header flex-vertical flex-justify-content-center">
         Followers
       </div>
-      {users.map((user) => (
+      {followers.map((user) => (
         <div key={user.id}>
           <UserInformation user={user} />
         </div>

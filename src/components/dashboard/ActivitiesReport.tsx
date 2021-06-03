@@ -1,133 +1,39 @@
 import * as React from "react";
 import ReactApexChart from "react-apexcharts";
-import { ApexOptions } from "apexcharts";
+import clsx from "clsx";
 
-const chartOptions: ApexOptions = {
-  chart: {
-    type: "bar",
-    height: 350,
-    stacked: true,
-    toolbar: {
-      show: false,
-    },
-    zoom: {
-      enabled: false,
-    },
-  },
-  responsive: [
-    {
-      breakpoint: 480,
-      options: {
-        legend: {
-          position: "bottom",
-          offsetX: -10,
-          offsetY: 0,
-        },
-      },
-    },
-  ],
-  plotOptions: {
-    bar: {
-      borderRadius: 4,
-      horizontal: false,
-    },
-  },
-  xaxis: {},
-  legend: {
-    position: "top",
-    offsetY: 0,
-  },
-  fill: {
-    opacity: 1,
-  },
-  grid: {
-    row: {
-      colors: ["#fff", "#f2f2f2"],
-    },
-  },
-};
+import { latestActivitiesData } from "./data/latestActivities";
+import {
+  browserUsagePieChartOptions,
+  browserUsagePieChartSeries,
+} from "./data/browserUsagePieChart";
+import {
+  customersChartOptions,
+  customersChartSeries,
+} from "./data/customersChart";
 
-const chartSeries: Array<any> = [
-  {
-    name: "Customers",
-    data: [
-      [1, 200],
-      [2, 400],
-      [3, 500],
-      [4, 700],
-      [5, 600],
-      [6, 400],
-      [7, 500],
-      [8, 400],
-      [9, 320],
-      [10, 380],
-      [11, 500],
-      [12, 700],
-    ],
-  },
-  {
-    name: "Users",
-    data: [
-      [1, 300],
-      [2, 500],
-      [3, 600],
-      [4, 800],
-      [5, 700],
-      [6, 500],
-      [7, 600],
-      [8, 500],
-      [9, 420],
-      [10, 480],
-      [11, 600],
-      [12, 700],
-    ],
-  },
-];
-
-const StackedColumnsCharts = () => (
+const CustomerBarChart = () => (
   <div id="chart">
     <ReactApexChart
-      options={chartOptions}
-      series={chartSeries}
+      options={customersChartOptions}
+      series={customersChartSeries}
       type="bar"
       height={320}
     />
   </div>
 );
 
-const browserUsagePieChartOptions: ApexOptions = {
-  chart: {
-    width: 120,
-    type: "pie",
-  },
-  labels: ["Chrome", "Safari", "Firefox"],
-  responsive: [
-    {
-      breakpoint: 280,
-      options: {
-        chart: {
-          width: 100,
-        },
-        legend: {
-          position: "bottom",
-        },
-      },
-    },
-  ],
-};
-
 const BrowserUsagePieChart = () => (
   <div id="chart">
     <ReactApexChart
       options={browserUsagePieChartOptions}
-      series={[60, 30, 10]}
+      series={browserUsagePieChartSeries}
       type="pie"
       width={250}
       height={120}
     />
   </div>
 );
-
 export const ActivitiesReport = () => (
   <div className="flex-horizontal activities1">
     <div className="flex-vertical first-column">
@@ -138,33 +44,17 @@ export const ActivitiesReport = () => (
         <hr className="widget-separator" />
         <div className="widget-body">
           <div className="streamline">
-            <div className="sl-item sl-primary">
-              <div className="sl-content">
-                <small className="text-muted">23 mins ago</small>
-                <p>John has just started working on the project</p>
+            {latestActivitiesData.map((activity) => (
+              <div
+                key={activity.id}
+                className={clsx("sl-item", activity.activity_classname)}
+              >
+                <div className="sl-content">
+                  <small className="text-muted">{activity.last_time}</small>
+                  <p>{activity.description}</p>
+                </div>
               </div>
-            </div>
-
-            <div className="sl-item sl-danger">
-              <div className="sl-content">
-                <small className="text-muted">23 mins ago</small>
-                <p>Jane sent you invitation to attend the party</p>
-              </div>
-            </div>
-
-            <div className="sl-item sl-success">
-              <div className="sl-content">
-                <small className="text-muted">23 mins ago</small>
-                <p>Sally added you to her circles</p>
-              </div>
-            </div>
-
-            <div className="sl-item sl-warning">
-              <div className="sl-content">
-                <small className="text-muted">23 mins ago</small>
-                <p>Sara has finished her task</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -194,7 +84,7 @@ export const ActivitiesReport = () => (
         </header>
         <hr className="widget-separator" />
         <div className="widget-body">
-          <StackedColumnsCharts />
+          <CustomerBarChart />
         </div>
       </div>
     </div>
