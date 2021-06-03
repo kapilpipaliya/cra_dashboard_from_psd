@@ -29,31 +29,48 @@ const Card = (props: CardProps) => {
   );
 };
 
+interface ShortcutData {
+  title: string;
+  subtitle: string;
+  iconClassName: string;
+  variant: "normal" | "warning" | "success" | "danger";
+}
+const shortcutData: ShortcutData[] = [
+  {
+    title: "66,163K",
+    subtitle: "Total Leads",
+    iconClassName: "fas fa-shopping-bag",
+    variant: "normal",
+  },
+  {
+    title: "3,490K",
+    subtitle: "Total Pending",
+    iconClassName: "far fa-times-circle",
+    variant: "danger",
+  },
+  {
+    title: "38,372K",
+    subtitle: "Case Closed",
+    iconClassName: "fas fa-lock",
+    variant: "success",
+  },
+  {
+    title: "5,355K",
+    subtitle: "Task Completed",
+    iconClassName: "fas fa-paste",
+    variant: "warning",
+  },
+];
+
 export const ShortcutFeature = () => (
   <div className="flex-horizontal shortcut-feature">
-    <Card
-      title="66,163K"
-      subtitle="Total Leads"
-      iconClassName="fas fa-shopping-bag"
-      variant="normal"
-    />
-    <Card
-      title="3,490K"
-      subtitle="Total Pending"
-      iconClassName="far fa-times-circle"
-      variant="danger"
-    />
-    <Card
-      title="38,372K"
-      subtitle="Case Closed"
-      iconClassName="fas fa-lock"
-      variant="success"
-    />
-    <Card
-      title="5,355K"
-      subtitle="Task Completed"
-      iconClassName="fas fa-paste"
-      variant="warning"
-    />
+    {shortcutData.map((shortcut) => (
+      <Card
+        title={shortcut.title}
+        subtitle={shortcut.subtitle}
+        iconClassName={shortcut.iconClassName}
+        variant={shortcut.variant}
+      />
+    ))}
   </div>
 );
