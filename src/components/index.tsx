@@ -16,7 +16,7 @@ export const Dashboard = () => {
   return (
     <>
       <Menu sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-      <div className="flex-horizontal">
+      <div>
         <Navbar sidebarOpen={sidebarOpen} />
         <div
           className={clsx(

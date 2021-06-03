@@ -53,6 +53,7 @@ export const Menu = (props: MenuProps) => {
               setIsOpen={setProfileMenu}
               navigationOptions={profileMenuOptions}
               isModal
+              className={sidebarOpen ? "shift-right" : ""}
             />
           </div>
           <div className="bedge followers-menu-container ">
@@ -67,7 +68,11 @@ export const Menu = (props: MenuProps) => {
               className="icon fas fa-th"
               onClick={() => setFollowersMenu((prevState) => !prevState)}
             />
-            <Followers isOpen={followersMenu} setIsOpen={setFollowersMenu} />
+            <Followers
+              isOpen={followersMenu}
+              setIsOpen={setFollowersMenu}
+              className={sidebarOpen ? "shift-right" : ""}
+            />
           </div>
         </div>
       </div>
@@ -78,21 +83,23 @@ export const Menu = (props: MenuProps) => {
 interface FollowersProps {
   isOpen: boolean;
   setIsOpen: (v: boolean) => void;
+  className?: string;
 }
 
 export const Followers = (props: FollowersProps) => {
   const menuDivRef = useRef<HTMLDivElement>(null);
-  const { isOpen, setIsOpen } = props;
+  const { isOpen, setIsOpen, className } = props;
   useOutSideClick(menuDivRef, isOpen, setIsOpen);
 
   return (
     <div
       ref={menuDivRef}
       className={clsx(
-        "flex-vertical color-black ",
+        "flex-vertical",
         !isOpen && "display-none",
         "modal",
-        "followers-menu"
+        "followers-menu",
+        className
       )}
     >
       <div className="header flex-vertical flex-justify-content-center">

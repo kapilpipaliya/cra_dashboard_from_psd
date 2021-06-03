@@ -43,10 +43,10 @@ export const TodoList = () => (
     <div className="new-todo">
       <input type="text" placeholder="add new task" />
     </div>
-    <footer className="widget-footer">
+    <footer className="widget-footer flex-horizontal">
       <a className="btn btn-success m-r-md">All</a>
       <a className="btn btn-default">Archive</a>
-      <a className="btn btn-default pull-right">Clear completed</a>
+      <a className="btn btn-default margin-left-auto">Clear completed</a>
     </footer>
   </div>
 );

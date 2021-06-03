@@ -14,11 +14,13 @@ export const Navbar = (props: NavbarProps) => {
   const { sidebarOpen } = props;
 
   return (
-    <div className={clsx("side-bar", sidebarOpen ? "menubar-in" : "")}>
-      <a
-        href="/"
-        className="bg-blue color-white flex-align-items-center flex-horizontal logo"
-      >
+    <div
+      className={clsx(
+        "flex-vertical side-bar",
+        sidebarOpen ? "menubar-in" : ""
+      )}
+    >
+      <a href="/" className="flex-align-items-center flex-horizontal logo">
         <span className="brand-icon">
           <i className="fab fa-gg-circle" />
         </span>
@@ -38,12 +40,7 @@ export const Navbar = (props: NavbarProps) => {
           }}
         />
       </div>
-      <Navigation
-        isOpen={true}
-        setIsOpen={() => 0}
-        navigationOptions={navigationOptions}
-        isModal={false}
-      />
+      <Navigation navigationOptions={navigationOptions} isModal={false} />
     </div>
   );
 };
