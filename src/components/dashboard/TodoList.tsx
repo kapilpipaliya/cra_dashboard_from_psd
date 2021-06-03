@@ -32,6 +32,7 @@ export const TodoList = () => (
       <ul className="todo-list">
         {todoData.map((todo) => (
           <TodoItem
+            key={todo.id}
             id={todo.id}
             todo={todo.todo}
             className={todo.className}

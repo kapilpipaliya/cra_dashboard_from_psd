@@ -24,7 +24,7 @@ export const ActiveLeads = () => (
             </thead>
             <tbody>
               {leadData.map((lead) => (
-                <tr>
+                <tr key={lead.id}>
                   <td className={lead.text_color}>{lead.type}</td>
                   <td>{lead.lead_name}</td>
                   <td>{lead.views}</td>

@@ -35,6 +35,7 @@ export const ShortcutFeature = () => (
   <div className="flex-horizontal shortcut-feature">
     {shortcutData.map((shortcut) => (
       <Card
+        key={shortcut.id}
         title={shortcut.title}
         subtitle={shortcut.subtitle}
         iconClassName={shortcut.iconClassName}
