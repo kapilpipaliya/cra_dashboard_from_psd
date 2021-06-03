@@ -1,4 +1,5 @@
 interface Lead {
+  id: number;
   text_color: string;
   type: string;
   lead_name: string;
@@ -11,6 +12,7 @@ interface Lead {
 
 export const leadData: Lead[] = [
   {
+    id: 1,
     text_color: "text-primary",
     type: "Buyer",
     lead_name: "Denise Ann",
@@ -21,6 +23,7 @@ export const leadData: Lead[] = [
     last_action: "11/9/2015",
   },
   {
+    id: 2,
     text_color: "text-primary",
     type: "Buyer",
     lead_name: "Denise Ann",
@@ -31,6 +34,7 @@ export const leadData: Lead[] = [
     last_action: "11/9/2015",
   },
   {
+    id: 3,
     text_color: "text-success",
     type: "Landlord",
     lead_name: "Denise Ann",
@@ -41,6 +45,7 @@ export const leadData: Lead[] = [
     last_action: "11/9/2015",
   },
   {
+    id: 4,
     text_color: "text-primary",
     type: "Buyer",
     lead_name: "Denise Ann",
@@ -51,6 +56,7 @@ export const leadData: Lead[] = [
     last_action: "11/9/2015",
   },
   {
+    id: 5,
     text_color: "text-danger",
     type: "Seller",
     lead_name: "Denise Ann",
@@ -61,6 +67,7 @@ export const leadData: Lead[] = [
     last_action: "11/9/2015",
   },
   {
+    id: 6,
     text_color: "text-primary",
     type: "Buyer",
     lead_name: "Denise Ann",
@@ -71,6 +78,7 @@ export const leadData: Lead[] = [
     last_action: "11/9/2015",
   },
   {
+    id: 7,
     text_color: "text-primary",
     type: "Buyer",
     lead_name: "Denise Ann",
@@ -81,6 +89,7 @@ export const leadData: Lead[] = [
     last_action: "11/9/2015",
   },
   {
+    id: 8,
     text_color: "text-danger",
     type: "Buyer",
     lead_name: "Denise Ann",
