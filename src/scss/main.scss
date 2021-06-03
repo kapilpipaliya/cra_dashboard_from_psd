@@ -109,6 +109,7 @@ $menu-bar-width: 250px;
   left: -$menu-bar-width;
   top: 0;
   z-index: 1;
+  height: 100%;
   @media(min-width: 700px) {
     width: $menu-bar-width;
     //left: 0;
@@ -116,13 +117,13 @@ $menu-bar-width: 250px;
 }
 
 .navigation-menu {
-
   width: auto;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
   gap: 2px;
   background-color: white;
   border-radius: 5px;
   cursor: auto;
+  flex-grow: 1;
 
   .list-item {
     padding-left: 14px;
