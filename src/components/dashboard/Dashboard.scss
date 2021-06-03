@@ -446,17 +446,22 @@
     font-weight: 400;
     color: lighten(variables.$light-black, 25%);
     letter-spacing: 1.5px;
+    padding: 11px;
   }
 
   .footer-menu {
     list-style-type: none;
-    margin: 0 0 0 auto;
+    @media(min-width: 800px) {
+      margin: 0 0 0 auto;
+    }
 
     li {
       display: inline-block;
     }
   }
-
+  ul {
+    padding: 0;
+  }
   ul > li > a {
     display: block;
     padding: 0 .75rem;
