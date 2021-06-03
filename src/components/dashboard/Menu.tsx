@@ -39,7 +39,7 @@ export const Menu = (props: MenuProps) => {
         <div className="flex-horizontal flex-justify-content-end menu-actions">
           <div className="bedge profile-menu-container cursor-pointer">
             <i
-              className="icon far fa-bell"
+              className="icon fa fa-bell"
               onClick={() => setProfileMenu((prevState) => !prevState)}
             />
             <span
@@ -56,11 +56,11 @@ export const Menu = (props: MenuProps) => {
               className={sidebarOpen ? "shift-right" : ""}
             />
           </div>
-          <div className="bedge followers-menu-container ">
-            <i className="icon far fa-envelope" />
+          <div className="bedge followers-menu-container cursor-pointer">
+            <i className="icon fa fa-envelope" />
             <span className="badge-item">4</span>
           </div>
-          <div className="bedge">
+          <div className="bedge cursor-pointer">
             <i className="icon fas fa-search" />
           </div>
           <div className="bedge cursor-pointer">
