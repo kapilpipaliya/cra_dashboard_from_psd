@@ -26,7 +26,8 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  @media(min-width: 700px){
+
+  @media(min-width: 800px) {
     flex-wrap: unset;
   }
 }
@@ -83,33 +84,33 @@ body {
   left: 0;
   width: auto;
 
-  @media(min-width: 700px) {
+  @media(min-width: 800px) {
     width: 250px;
     position: absolute;
     left: unset;
   }
 }
 
-$menu-bar-width: 250px;
+
 .menubar-in {
   left: 0 !important;
 }
 
 .shift-right {
   margin-left: 225px;
-  @media(min-width: 700px){
+  @media(min-width: 800px) {
     margin-left: 250px;
   }
 }
 
 .side-bar {
   position: fixed;
-  left: -$menu-bar-width;
+  left: -(variables.$menu-bar-width);
   top: 0;
   z-index: 1;
   height: 100%;
-  @media(min-width: 700px) {
-    width: $menu-bar-width;
+  @media(min-width: 800px) {
+    width: variables.$menu-bar-width;
     //left: 0;
   }
 }
@@ -148,10 +149,10 @@ $menu-bar-width: 250px;
   }
 
   .list-count {
-
     color: #fff;
     padding: 4px 7px;
     border-radius: 5px;
+    font-family: "Lato", sans-serif;
     font-size: 90%;
     margin-left: auto;
     line-height: 1;
@@ -178,8 +179,7 @@ $menu-bar-width: 250px;
     width: 100%;
   }
 
-  @media(min-width: 700px) {
-
+  @media(min-width: 800px) {
     .list-item {
       padding-left: 16px;
       gap: 10px;
