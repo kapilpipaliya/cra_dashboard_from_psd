@@ -256,11 +256,12 @@
   }
 
   .second-column {
-    width: 60%;
+    flex-basis: 900px;
   }
 }
 
 .active-leads {
+  flex-wrap: wrap !important;
   gap: 5px;
 
   @media(min-width: 800px) {
@@ -268,7 +269,7 @@
   }
 
   .first-column {
-    width: 100%;
+    flex-grow: 1;
     @media(min-width: 800px) {
       gap: 60%;
     }
@@ -306,7 +307,7 @@
   }
 
   .second-column {
-    width: 100%;
+    flex-grow: 1;
 
     @media(min-width: 800px) {
       gap: 40%;
@@ -433,7 +434,13 @@
   }
 
   .pie-chart {
+    flex-wrap: wrap;
     gap: 10px;
+
+  .chart-description {
+    flex-basis: 280px;
+    flex-grow: 1;
+  }
   }
 
   @media(min-width: 800px) {
