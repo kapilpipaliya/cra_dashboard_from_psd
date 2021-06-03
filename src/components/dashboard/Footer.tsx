@@ -2,7 +2,7 @@ import * as React from "react";
 
 export const Footer = () => (
   <div>
-    <footer className="flex-horizontal flex-align-items-center footer">
+    <footer className="flex-horizontal flex-align-items-center dashboard-footer">
       <div className="copyright ">Copyright Abc 2015 &copy;</div>
       <ul className="flex-horizontal  footer-menu">
         <li>

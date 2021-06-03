@@ -19,7 +19,7 @@ const Card = (props: CardProps) => {
           <h3 className={clsx("widget-title", variant)}>{title}</h3>
           <div className="subtitle">{subtitle}</div>
         </div>
-        <div className="count">
+        <div className="count watermark">
           <i className={iconClassName} />
         </div>
       </div>
