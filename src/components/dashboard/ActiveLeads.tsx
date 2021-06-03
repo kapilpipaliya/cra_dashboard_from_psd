@@ -10,8 +10,8 @@ export const ActiveLeads = () => (
           <h4 className="widget-title">Active Leads</h4>
         </header>
         <hr className="widget-separator" />
-        <div className="widget-body">
-          <table className="table no-cellborder">
+        <div className="widget-body overflow-x">
+          <table className="table">
             <thead>
               <tr>
                 <th>Type</th>
@@ -24,7 +24,7 @@ export const ActiveLeads = () => (
             </thead>
             <tbody>
               {leadData.map((lead) => (
-                <tr>
+                <tr key={lead.id}>
                   <td className={lead.text_color}>{lead.type}</td>
                   <td>{lead.lead_name}</td>
                   <td>{lead.views}</td>

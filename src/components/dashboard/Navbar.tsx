@@ -17,10 +17,13 @@ export const Navbar = (props: NavbarProps) => {
     <div
       className={clsx(
         "flex-vertical side-bar",
-        sidebarOpen ? "menubar-in" : ""
+        sidebarOpen ? "navbar-show" : ""
       )}
     >
-      <a href="/" className="flex-align-items-center flex-horizontal logo">
+      <a
+        href="/"
+        className="bg-blue color-white flex-align-items-center flex-horizontal logo"
+      >
         <span className="brand-icon">
           <i className="fab fa-gg-circle" />
         </span>
