@@ -1,3 +1,5 @@
+@use '../../scss/variables';
+
 .dashboard-content {
   padding: 10px;
   background-color: rgb(237, 240, 245);
@@ -106,6 +108,7 @@
   gap: 2px;
   border-radius: 5px;
   cursor: auto;
+  color: variables.$light-black;
 
   .header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -141,7 +144,6 @@
 
   .subtitle {
     font-size: 95%;
-    color: #6a6c6f;
   }
 
   .count {
@@ -182,7 +184,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
-    color: white;
 
     &.normal {
       background: #3f51b5;
@@ -415,13 +416,13 @@
 }
 
 .footer {
-  $text-color: #6a6c6f;
   padding: 24px 0 0;
   border-top: 1px solid #cccccc;
+  color: white;
 
   .copyright {
     font-weight: 400;
-    color: lighten($text-color, 25%);
+    color: lighten(variables.$light-black, 25%);
     letter-spacing: 1.5px;
   }
 
@@ -438,6 +439,6 @@
     display: block;
     padding: 0 .75rem;
     font-weight: 400;
-    color: lighten($text-color, 25%);
+    color: lighten(variables.$light-black, 25%);
   }
 }

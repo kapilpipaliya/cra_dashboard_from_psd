@@ -30,7 +30,7 @@ export const Navigation = (props: NavigationProps) => {
     <div
       ref={menuDivRef}
       className={clsx(
-        "flex-vertical navigation-menu color-black",
+        "flex-vertical navigation-menu",
         isOpen === false && "display-none",
         isModal && "modal",
         className

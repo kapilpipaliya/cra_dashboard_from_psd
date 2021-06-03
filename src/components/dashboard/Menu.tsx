@@ -89,7 +89,7 @@ export const Followers = (props: FollowersProps) => {
     <div
       ref={menuDivRef}
       className={clsx(
-        "flex-vertical color-black ",
+        "flex-vertical",
         !isOpen && "display-none",
         "modal",
         "followers-menu"
