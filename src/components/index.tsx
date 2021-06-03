@@ -21,7 +21,7 @@ export const Dashboard = () => {
         <div
           className={clsx(
             "flex-grow-1 dashboard-content",
-            sidebarOpen ? "shift-right" : ""
+            sidebarOpen ? "shift-right-desktop" : ""
           )}
         >
           <WelcomeToInfinity />

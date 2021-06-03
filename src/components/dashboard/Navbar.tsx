@@ -17,7 +17,7 @@ export const Navbar = (props: NavbarProps) => {
     <div
       className={clsx(
         "flex-vertical side-bar",
-        sidebarOpen ? "menubar-in" : ""
+        sidebarOpen ? "navbar-show" : ""
       )}
     >
       <a

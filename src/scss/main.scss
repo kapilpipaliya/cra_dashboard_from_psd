@@ -99,13 +99,18 @@ body {
   }
 }
 
-
-.menubar-in {
+.navbar-show {
   left: 0 !important;
 }
 
 .shift-right {
   margin-left: 225px;
+  @media(min-width: 800px) {
+    margin-left: 250px;
+  }
+}
+
+.shift-right-desktop{
   @media(min-width: 800px) {
     margin-left: 250px;
   }
@@ -254,9 +259,12 @@ body {
   background-color: #fff;
   margin-bottom: 1.5rem;
   box-shadow: 0 1px 2px #ccc;
+  border-radius: 8px;
 
   .widget-footer {
     background-color: #f0f4fb;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
   }
 
   small {
