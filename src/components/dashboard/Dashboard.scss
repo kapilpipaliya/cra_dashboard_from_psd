@@ -307,8 +307,13 @@
       margin-bottom: 12px;
       position: relative;
       display: block;
-    }
 
+      input[type="checkbox"]:checked + label {
+        font-style: italic;
+        color: #cbc6c6;
+        text-decoration: line-through;
+      }
+    }
 
     .checkbox label {
       display: inline-block;
