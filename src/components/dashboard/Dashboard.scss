@@ -1,7 +1,7 @@
 @use '../../scss/variables';
 
 .dashboard-content {
-  padding: 10px;
+  padding: 40px 20px;
   background-color: rgb(237, 240, 245);
   @media(min-width: 800px) {
     padding: 40px;
@@ -147,13 +147,10 @@
 // welcome container
 .welcome-container {
   font-family: 'Raleway', sans-serif;
-  gap: 5px;
-  @media(min-width: 800px) {
-    gap: 20px;
-  }
+  gap: 1rem;
 
   .card {
-    width: calc(50% - 5px);
+    flex: 1 0 250px;
     padding: 1rem;
   }
 
@@ -170,13 +167,10 @@
 
 .shortcut-feature {
   font-family: 'Raleway', sans-serif;
-  gap: 5px;
-  @media(min-width: 800px) {
-    gap: 20px;
-  }
+  gap: 1rem;
 
   .card {
-    flex-grow: 1;
+    flex: 1 0 250px;
   }
 
   .top-part {
@@ -233,11 +227,7 @@
 .sales-in-2014 {
   justify-content: space-between;
   padding: 24px;
-  gap: 5px;
-
-  @media(min-width: 800px) {
-    gap: 20px;
-  }
+  gap: 1rem;
 
   .first-column, .second-column {
     flex-grow: 1;
@@ -263,21 +253,14 @@
 
 .active-leads {
   flex-wrap: wrap !important;
-  gap: 5px;
-
-  @media(min-width: 800px) {
-    gap: 20px;
-  }
+  gap: 1rem;
 
   .first-column {
     flex-grow: 1;
-    @media(min-width: 800px) {
-      gap: 60%;
-    }
   }
 
   .table-container {
-    max-width: calc(100vw - 35px);
+    max-width: calc(100vw - 80px);
   }
 
   .table {
@@ -314,10 +297,6 @@
   .second-column {
     flex-grow: 1;
 
-    @media(min-width: 800px) {
-      gap: 40%;
-    }
-
     .p-b-0 {
       padding-bottom: 0;
     }
@@ -333,7 +312,7 @@
       margin-top: 0;
       margin-bottom: 12px;
       position: relative;
-      display: block;
+      display: flex;
 
       input[type="checkbox"]:checked + label {
         font-style: italic;
@@ -424,18 +403,14 @@
 }
 
 .activities1 {
-  gap: 5px;
-
-  @media(min-width: 800px) {
-    gap: 20px;
-  }
+  gap: 1rem;
 
   .first-column {
-    width: 100%;
+    flex: 1 0 250px;
   }
 
   .second-column {
-    width: 100%;
+    flex: 1 0 250px;
   }
 
   .pie-chart {
@@ -443,19 +418,10 @@
     gap: 10px;
 
     .chart-description {
-      flex-basis: 280px;
-      flex-grow: 1;
+      flex: 1 0 250px;
     }
   }
 
-  @media(min-width: 800px) {
-    .first-column {
-      width: 50%;
-    }
-    .second-column {
-      width: 50%;
-    }
-  }
 }
 
 .dashboard-footer {

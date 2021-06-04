@@ -17,20 +17,22 @@ const SalesLineChart = () => (
 );
 
 export const Sales = () => (
-  <div className="flex-horizontal sales-in-2014 widget">
-    <div className="first-column">
-      <div>
-        <h3 className="widget-title">Sales in 2014</h3>
-        <p className="">
-          Collaboratively administrate empowered markets via plug-and-play
-          networks. Dynamically procrastinate B2C users after installed base
-          benefits
-        </p>
+  <div className="widgets-container">
+    <div className="flex-horizontal sales-in-2014 widget">
+      <div className="first-column">
+        <div>
+          <h3 className="widget-title">Sales in 2014</h3>
+          <p className="">
+            Collaboratively administrate empowered markets via plug-and-play
+            networks. Dynamically procrastinate B2C users after installed base
+            benefits
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div className="second-column">
-      <SalesLineChart />
+      <div className="second-column">
+        <SalesLineChart />
+      </div>
     </div>
   </div>
 );

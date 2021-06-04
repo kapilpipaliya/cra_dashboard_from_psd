@@ -3,7 +3,7 @@ import { TodoList } from "./TodoList";
 import { leadData } from "./data/leadData";
 
 export const ActiveLeads = () => (
-  <div className="flex-horizontal active-leads">
+  <div className="flex-horizontal active-leads widgets-container">
     <div className="first-column">
       <div className="widget">
         <header className="widget-header">

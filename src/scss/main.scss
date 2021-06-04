@@ -255,9 +255,11 @@ body {
 }
 
 // widget
+.widgets-container {
+  margin-bottom: 1.5rem;
+}
 .widget {
   background-color: #fff;
-  margin-bottom: 1.5rem;
   box-shadow: 0 1px 2px #ccc;
   border-radius: 8px;
 
