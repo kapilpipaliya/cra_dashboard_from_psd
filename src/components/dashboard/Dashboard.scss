@@ -353,6 +353,16 @@
       background-color: transparent;
     }
 
+    .todo-footer {
+      gap: 0.8rem;
+
+      .clear-button {
+          @media(min-width: 800px) {
+            margin-left: auto;
+          }
+      }
+    }
+
     input {
       font-family: inherit;
       font-size: inherit;
