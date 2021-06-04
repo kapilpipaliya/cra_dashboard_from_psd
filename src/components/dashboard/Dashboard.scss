@@ -122,6 +122,9 @@
   border-radius: 5px;
   cursor: auto;
   color: variables.$light-black;
+  height: calc(100vh - 60px);
+  overflow-y: scroll;
+  overscroll-behavior: contain;
 
   .header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
