@@ -46,7 +46,7 @@ export const TodoList = () => (
     </div>
     <footer className="widget-footer flex-horizontal todo-footer">
       <a className="btn btn-success m-r-md">All</a>
-      <a className="btn btn-default">Archive</a>
+      <a className="btn btn-default m-r-md">Archive</a>
       <a className="btn btn-default clear-button">Clear completed</a>
     </footer>
   </div>
