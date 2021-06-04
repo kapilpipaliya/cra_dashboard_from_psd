@@ -77,8 +77,21 @@ body {
   margin-left: auto;
 }
 
-.overflow-x{
+.overflow-x {
   overflow-x: auto;
+}
+
+.disable-content-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.5);
+  z-index: 3;
+  @media(min-width: 800px) {
+    display: none;
+  }
 }
 
 .modal {
@@ -110,7 +123,7 @@ body {
   }
 }
 
-.shift-right-desktop{
+.shift-right-desktop {
   @media(min-width: 800px) {
     margin-left: 250px;
   }
@@ -120,7 +133,7 @@ body {
   position: fixed;
   left: -(variables.$side-bar-width);
   top: 0;
-  z-index: 1;
+  z-index: 4;
   height: 100%;
   @media(min-width: 800px) {
     width: variables.$side-bar-width;
@@ -258,6 +271,7 @@ body {
 .widgets-container {
   margin-bottom: 1.5rem;
 }
+
 .widget {
   background-color: #fff;
   box-shadow: 0 1px 2px #ccc;

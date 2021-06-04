@@ -10,6 +10,7 @@ import { Sales } from "./dashboard/Sales";
 import { ActiveLeads } from "./dashboard/ActiveLeads";
 import { ActivitiesReport } from "./dashboard/ActivitiesReport";
 import { Footer } from "./dashboard/Footer";
+import { ContentOverly } from "./dashboard/ContentOverly";
 
 export const Dashboard = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -18,6 +19,10 @@ export const Dashboard = () => {
       <Menu sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
       <div>
         <Navbar sidebarOpen={sidebarOpen} />
+        <ContentOverly
+          sidebarOpen={sidebarOpen}
+          setSidebarOpen={setSidebarOpen}
+        />
         <div
           className={clsx(
             "flex-grow-1 dashboard-content",
