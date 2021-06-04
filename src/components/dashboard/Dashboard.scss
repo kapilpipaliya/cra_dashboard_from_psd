@@ -423,12 +423,14 @@
       flex: 1 0 250px;
     }
   }
-
 }
 
 .dashboard-footer {
   padding: 24px 0 0;
   border-top: 1px solid #cccccc;
+  @media(min-width: 800px) {
+    flex-direction: row !important;
+  }
 
   .copyright {
     font-weight: 400;
@@ -439,7 +441,9 @@
 
   .footer-menu {
     list-style-type: none;
+    text-align: center;
     @media(min-width: 800px) {
+      flex-direction: row !important;
       margin: 0 0 0 auto;
     }
 
