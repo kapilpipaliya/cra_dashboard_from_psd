@@ -118,6 +118,7 @@ body {
 
 .shift-right {
   margin-left: 225px;
+  transition: margin 0.6s, transform 0.2s ease-in-out;
   @media(min-width: 800px) {
     margin-left: 250px;
   }
