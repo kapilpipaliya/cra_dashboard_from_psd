@@ -41,6 +41,9 @@
 .header-nav {
   padding: 5px 15px;
   flex-wrap: nowrap !important;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 
   h5 {
     font-size: 14px;
