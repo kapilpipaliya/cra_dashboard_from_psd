@@ -10,7 +10,7 @@ export const ActiveLeads = () => (
           <h4 className="widget-title">Active Leads</h4>
         </header>
         <hr className="widget-separator" />
-        <div className="widget-body overflow-x">
+        <div className="widget-body overflow-x table-container">
           <table className="table">
             <thead>
               <tr>

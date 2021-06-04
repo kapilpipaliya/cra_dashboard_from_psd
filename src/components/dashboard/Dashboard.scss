@@ -276,6 +276,10 @@
     }
   }
 
+  .table-container {
+    max-width: calc(100vw - 35px);
+  }
+
   .table {
     border-top: none;
     margin-top: -2px;
@@ -438,10 +442,10 @@
     flex-wrap: wrap;
     gap: 10px;
 
-  .chart-description {
-    flex-basis: 280px;
-    flex-grow: 1;
-  }
+    .chart-description {
+      flex-basis: 280px;
+      flex-grow: 1;
+    }
   }
 
   @media(min-width: 800px) {
@@ -475,9 +479,11 @@
       display: inline-block;
     }
   }
+
   ul {
     padding: 0;
   }
+
   ul > li > a {
     display: block;
     padding: 0 .75rem;
