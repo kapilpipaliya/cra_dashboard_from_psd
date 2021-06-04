@@ -126,6 +126,7 @@ body {
 .shift-right-desktop {
   @media(min-width: 800px) {
     margin-left: 250px;
+    transition: margin 0.6s, transform 0.2s ease-in-out;
   }
 }
 
@@ -135,6 +136,7 @@ body {
   top: 0;
   z-index: 4;
   height: 100%;
+  transition: margin 0.6s, left 0.2s ease-in-out, top 0.5s;
   @media(min-width: 800px) {
     width: variables.$side-bar-width;
     //left: 0;
