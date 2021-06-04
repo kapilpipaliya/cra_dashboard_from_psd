@@ -147,6 +147,7 @@
 // welcome container
 .welcome-container {
   font-family: 'Raleway', sans-serif;
+  flex-wrap: wrap !important;
   gap: 1rem;
 
   .card {
