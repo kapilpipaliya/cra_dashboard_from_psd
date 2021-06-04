@@ -257,11 +257,11 @@
   gap: 1rem;
 
   .first-column {
+    width: 100%;
     flex-grow: 1;
   }
 
   .table-container {
-    max-width: calc(100vw - 80px);
   }
 
   .table {
@@ -405,6 +405,7 @@
 
 .activities1 {
   gap: 1rem;
+  flex-wrap: wrap !important;
 
   .first-column {
     flex: 1 0 250px;
