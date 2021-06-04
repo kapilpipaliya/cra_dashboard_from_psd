@@ -32,15 +32,17 @@ const Card = (props: CardProps) => {
 };
 
 export const ShortcutFeature = () => (
-  <div className="flex-horizontal shortcut-feature">
-    {shortcutData.map((shortcut) => (
-      <Card
-        key={shortcut.id}
-        title={shortcut.title}
-        subtitle={shortcut.subtitle}
-        iconClassName={shortcut.iconClassName}
-        variant={shortcut.variant}
-      />
-    ))}
+  <div className="widgets-container">
+    <div className="flex-horizontal shortcut-feature">
+      {shortcutData.map((shortcut) => (
+        <Card
+          key={shortcut.id}
+          title={shortcut.title}
+          subtitle={shortcut.subtitle}
+          iconClassName={shortcut.iconClassName}
+          variant={shortcut.variant}
+        />
+      ))}
+    </div>
   </div>
 );

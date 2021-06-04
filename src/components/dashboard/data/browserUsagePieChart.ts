@@ -8,10 +8,10 @@ export const browserUsagePieChartOptions: ApexOptions = {
   labels: ["Chrome", "Safari", "Firefox"],
   responsive: [
     {
-      breakpoint: 280,
+      breakpoint: 800,
       options: {
         chart: {
-          width: 100,
+          height: 200,
         },
         legend: {
           position: "bottom",

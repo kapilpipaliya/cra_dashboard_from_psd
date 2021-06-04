@@ -29,15 +29,14 @@ const BrowserUsagePieChart = () => (
       options={browserUsagePieChartOptions}
       series={browserUsagePieChartSeries}
       type="pie"
-      width={250}
       height={120}
     />
   </div>
 );
 export const ActivitiesReport = () => (
-  <div className="flex-horizontal activities1">
+  <div className="flex-horizontal activities1 widgets-container">
     <div className="flex-vertical first-column">
-      <div className="widget">
+      <div className="widget widgets-container">
         <header className="widget-header">
           <h4 className="widget-title">Activities</h4>
         </header>

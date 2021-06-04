@@ -3,14 +3,14 @@ import { TodoList } from "./TodoList";
 import { leadData } from "./data/leadData";
 
 export const ActiveLeads = () => (
-  <div className="flex-horizontal active-leads">
+  <div className="flex-horizontal active-leads widgets-container">
     <div className="first-column">
       <div className="widget">
         <header className="widget-header">
           <h4 className="widget-title">Active Leads</h4>
         </header>
         <hr className="widget-separator" />
-        <div className="widget-body overflow-x">
+        <div className="widget-body overflow-x table-container">
           <table className="table">
             <thead>
               <tr>

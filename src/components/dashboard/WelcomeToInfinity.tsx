@@ -21,8 +21,14 @@ const Card = (props: CardProps) => {
 };
 
 export const WelcomeToInfinity = () => (
-  <div className="flex-horizontal welcome-container">
-    <Card title="Welcome to Infinity" subtitle="Number Of Views" count={102} />
-    <Card title="Active" subtitle="Leads/Contacts" count={325} />
+  <div className="widgets-container">
+    <div className="flex-horizontal welcome-container">
+      <Card
+        title="Welcome to Infinity"
+        subtitle="Number Of Views"
+        count={102}
+      />
+      <Card title="Active" subtitle="Leads/Contacts" count={325} />
+    </div>
   </div>
 );
