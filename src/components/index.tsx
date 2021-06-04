@@ -13,7 +13,7 @@ import { Footer } from "./dashboard/Footer";
 import { ContentOverly } from "./dashboard/ContentOverly";
 
 export const Dashboard = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(() => window.innerWidth > 800);
   return (
     <>
       <Menu sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />

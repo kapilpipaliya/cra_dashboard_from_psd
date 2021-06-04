@@ -168,7 +168,7 @@
 .shortcut-feature {
   font-family: 'Raleway', sans-serif;
   gap: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: wrap !important;
 
   .card {
     flex: 1 0 250px;
